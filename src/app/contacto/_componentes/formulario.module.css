@@ -1,0 +1,107 @@
+.container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .title {
+    font-size: 2rem;
+    color: #004080;
+    margin-bottom: 10px;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .inputGroup {
+    display: flex;
+    align-items: center;
+    background: #f0f0f0;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+  }
+  
+  .icon {
+    color: #004080;
+    margin-right: 10px;
+    font-size: 1.2rem;
+  }
+  
+  .input, .textarea {
+    width: 100%;
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 1rem;
+  }
+  
+  .textarea {
+    resize: none;
+    height: 100px;
+  }
+  
+  .button {
+    background: linear-gradient(to right, #0161c1, #72b6fe);
+    background-color: linear-gradient(to right, #007bff, #00d4ff);
+    color: white;
+    font-size: 1.2rem;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .button:hover {
+    background: linear-gradient(to right, #003366, #0056b3);
+    background-color: linear-gradient(to right, #014e9f, #01a0c0);
+  }
+
+  @media screen and (max-width: 768px) {
+    .container {
+      width: 90%;
+      padding: 20px;
+    }
+  
+    .title {
+      font-size: 1.5rem;
+    }
+  
+    .subtitle {
+      font-size: 0.8rem;
+    }
+  
+    .inputGroup {
+      padding: 5px;
+    }
+  
+    .icon {
+      font-size: 1rem;
+    }
+  
+    .input, .textarea {
+      font-size: 0.8rem;
+    }
+  
+    .textarea {
+      height: 80px;
+    }
+  
+    .button {
+      font-size: 1rem;
+      padding: 8px;
+    }
+  }
