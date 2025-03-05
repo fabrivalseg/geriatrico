@@ -1,7 +1,11 @@
-export default function Blog() {
+import Blog from "./_componentes/Blog";
+import Contacto from "../contacto/_componentes/Formulario";
+
+export default function PageBlog() {
     return (
-      <div>
-        blog
-      </div>
+      <>
+        <Blog />
+        <Contacto />
+      </>
     );
   }

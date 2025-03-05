@@ -12,9 +12,15 @@ export default function Header() {
         setMenu(!menu);
     };
 
+    const variant = {
+        initial: {y: -10, opacity: 0},
+        transition: {duration: 0.4},
+        whileInView: {y: 0, opacity: 1}
+    }
+
     return (
         <header className={style.headerContainer}>
-            <motion.div initial={{y: -50}} transition={{duration: 0.4, type: "spring"}} animate={{y: 0}} className={style.topBar}>
+            <motion.div variants={variant} initial="initial" transition="transition" whileInView="whileInView" className={style.topBar}>
                 <div className={style.imagenContainer}>
                     <img
                         className={style.imagenHeader}
@@ -24,11 +30,12 @@ export default function Header() {
                 </div>
                 <GiHamburgerMenu onClick={mostrarMenu} className={style.iconoResponsive} />
             </motion.div>
-            <motion.nav initial={{y: -50}} transition={{duration: 1, type: "spring"}} animate={{y: 0}} className={style.navContainer}>
+            <motion.nav variants={variant} initial="initial" transition="transition" whileInView="whileInView" className={style.navContainer}>
                 <Link className={style.linksHeader} href="/">Home</Link>
                 <Link className={style.linksHeader} href="/nosotros">Nosotros</Link>
+                <Link className={style.linksHeader} href="/servicios">Servicios</Link>
+                <Link className={style.linksHeader} href="/instalaciones">Instalaciones</Link>
                 <Link className={style.linksHeader} href="/blog">Blog</Link>
-                <Link className={style.linksHeader} href="/contacto">Contacto</Link>
             </motion.nav>
 
             <AnimatePresence>

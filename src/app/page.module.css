@@ -1,123 +1,115 @@
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    height: 100%;
-    width: 100%;
-    padding: 20px;
-}
-
-/* Estilos del video */
-.containerVideo {
-    width: 100%;
-    max-width: 800px;
-    height: 450px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.video {
+.homeSection {
+    padding: 0 0 4rem 0;
+  }
+  
+  .heroContainer {
+    position: relative;
+    height: 600px;
+    margin-bottom: 4rem;
+  }
+  
+  .heroImageContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    border: none;
-}
-
-/* Título principal */
-.tituloPrincipal {
-    font-size: 3rem;
-    font-weight: bold;
+    z-index: 1;
+  }
+  
+  .heroImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7);
+  }
+  
+  .heroContent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
     text-align: center;
-    color: #004080;
-    margin: 20px 0;
-    padding: 10px;
-    background: linear-gradient(to right, #007bff, #00d4ff);
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    color: white;
-}
-
-.parrafo {
-    font-size: 1.2rem;
-    text-align: justify;
-    line-height: 1.8;
-    color: #333;
-    max-width: 900px;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-}
-
-.tituloServicios {
-    font-size: 2rem;
-    margin: 20px 0;
-    text-align: center;
-    background: linear-gradient(to right, #007bff, #00d4ff);
-    padding: 15px;
-    border-radius: 10px;
-    color: white;
     width: 80%;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.containerServicios {
+    max-width: 800px;
+  }
+  
+  .heroSlogan {
+    font-size: 3rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .heroButton {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .heroButton:hover {
+    background-color: #2980b9;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  .questionsContainer {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    width: 90%;
+    grid-template-columns: 1fr;
+    gap: 2rem;
     max-width: 1200px;
-    padding: 20px;
-}
-
-.tarjetaServicio {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  @media (min-width: 768px) {
+    .questionsContainer {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  .questionBox {
+    background-color: #f8f9fa;
+    padding: 2rem;
     border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    text-align: center;
-}
-
-.tarjetaServicio:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
-}
-
-.tarjetaTitulo {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .questionBox:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .questionTitle {
     font-size: 1.5rem;
-    margin: 10px 0;
-    color: #004080;
-}
-
-.img {
-    width: 100%;
-    max-width: 200px;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 10px;
-}
-
-
-/* Responsive */
-@media screen and (max-width: 768px) {
-    .tituloPrincipal, .tituloServicios {
-        font-size: 2rem;
-    }
-    
-    .parrafo {
-        font-size: 1rem;
-        width: 90%;
-    }
-    
-    .containerServicios {
-        grid-template-columns: 1fr;
-    }
-}
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+  }
+  
+  .questionTitle::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background-color: #3498db;
+  }
+  
+  .questionAnswer {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+  }

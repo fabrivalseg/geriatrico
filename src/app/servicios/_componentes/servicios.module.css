@@ -1,0 +1,130 @@
+.sectionTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #2c3e50;
+  position: relative;
+}
+
+.sectionTitle::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: #3498db;
+}
+
+.serviciosSection {
+    padding: 5rem 1rem;
+    background-color: #f8f9fa;
+  }
+  
+  .servicesDescription {
+    max-width: 800px;
+    margin: 0 auto 3rem auto;
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+  }
+  
+  .servicesContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  @media (min-width: 768px) {
+    .servicesContainer {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .servicesContainer {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  .serviceItem {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .serviceItem:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .serviceTitle {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+  }
+  
+  .serviceTitle::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background-color: #3498db;
+  }
+  
+  .serviceDescription {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .heroSlogan {
+      font-size: 2.2rem;
+    }
+  
+    .sectionTitle {
+      font-size: 2rem;
+    }
+  
+    .valueTitle {
+      font-size: 1.5rem;
+    }
+  
+    .teamTitle {
+      font-size: 1.8rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .heroSlogan {
+      font-size: 1.8rem;
+    }
+  
+    .heroButton {
+      padding: 0.6rem 1.5rem;
+      font-size: 1rem;
+    }
+  
+    .sectionTitle {
+      font-size: 1.8rem;
+    }
+  
+    .questionTitle,
+    .serviceTitle {
+      font-size: 1.2rem;
+    }
+  }

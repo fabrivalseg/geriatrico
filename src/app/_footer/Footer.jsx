@@ -19,8 +19,9 @@ export default function Footer(){
                 <motion.div className={style.linksFooterContainer} variants={variant} initial="initial" transition="transition" whileInView="whileInView">
                     <motion.a className={style.linksFooter} whileHover={{scale: 1.1}} href="/">Home</motion.a>
                     <motion.a className={style.linksFooter} whileHover={{scale: 1.1}} href="/nosotros">Nosotros</motion.a>
+                    <motion.a className={style.linksFooter} whileHover={{scale: 1.1}} href="/servicios">Servicios</motion.a>
+                    <motion.a className={style.linksFooter} whileHover={{scale: 1.1}} href="/instalaciones">Instalaciones</motion.a>
                     <motion.a className={style.linksFooter} whileHover={{scale: 1.1}} href="/blog">Blog</motion.a>
-                    <motion.a className={style.linksFooter} whileHover={{scale: 1.1}} href="/contacto">Contacto</motion.a>
                 </motion.div>
                 <motion.div className={style.contactoFooterContainer} variants={variant} initial="initial" transition="transition" whileInView="whileInView">
                     <motion.p className={style.contactoFooter} whileHover={{scale: 1.1}}>Direccion: Sarmiento 1972</motion.p>

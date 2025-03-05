@@ -1,60 +1,126 @@
 import React from "react";
-import { MapPin, Heart, Users, ShieldCheck, Smile } from "lucide-react";
-import style from "./nosotros.module.css";
+import styles from "./nosotros.module.css";
+import Image from "next/image";
 
 const Nosotros = () => {
   return (
-    <div className={style.nosotrosContainer}>
-      <div className={style.nosotrosHeader}>
-        <h1>Sobre Nosotros</h1>
-        <p>
-          En nuestro geriátrico, nos comprometemos a proporcionar un ambiente cálido, seguro y confortable para nuestros residentes. Nuestra misión es garantizar bienestar, compañía y cuidados de calidad con un enfoque personalizado.
-        </p>
-      </div>
+    <section className={styles.nosotrosSection} id="nosotros">
+        <h2 className={styles.sectionTitle}>Nosotros</h2>
 
-      <div className={style.nosotrosGrid}>
-        <div className={style.nosotrosCard}>
-          <Heart className={`${style.icon} ${style.red}`} />
-          <h2>Atención Personalizada</h2>
-          <p>
-            Contamos con un equipo de profesionales altamente capacitados y comprometidos con la felicidad y el cuidado de nuestros residentes.
-          </p>
+        <div className={styles.valuesContainer}>
+          <div className={styles.valueCard}>
+            <div className={styles.valueIconContainer}>
+              <Image
+                src="/imagenes/nosotros/mision-vision-valores/Misión.webp?height=80&width=80"
+                alt="Misión"
+                width={80}
+                height={80}
+                className={styles.valueIcon}
+              />
+            </div>
+            <h3 className={styles.valueTitle}>Misión</h3>
+            <p className={styles.valueDescription}>
+              Proporcionar atención de calidad y un entorno acogedor para adultos mayores, promoviendo su bienestar
+              físico, emocional y social, respetando su dignidad y autonomía en todo momento.
+            </p>
+          </div>
+
+          <div className={styles.valueCard}>
+            <div className={styles.valueIconContainer}>
+              <Image
+                src="/imagenes/nosotros/mision-vision-valores/vision.png"
+                alt="Visión"
+                width={80}
+                height={80}
+                className={styles.valueIcon}
+              />
+            </div>
+            <h3 className={styles.valueTitle}>Visión</h3>
+            <p className={styles.valueDescription}>
+              Ser reconocidos como la residencia geriátrica líder en nuestra comunidad, estableciendo nuevos estándares
+              de excelencia en el cuidado de adultos mayores, a través de la innovación, la empatía y el compromiso con
+              el bienestar integral.
+            </p>
+          </div>
+
+          <div className={styles.valueCard}>
+            <div className={styles.valueIconContainer}>
+              <Image
+                src="/imagenes/nosotros/mision-vision-valores/valores.jpeg?height=80&width=80"
+                alt="Valores"
+                width={80}
+                height={80}
+                className={styles.valueIcon}
+              />
+            </div>
+            <h3 className={styles.valueTitle}>Valores</h3>
+            <p className={styles.valueDescription}>
+              Nos guiamos por el respeto, la compasión, la integridad, la excelencia y el trabajo en equipo. Estos
+              valores fundamentan nuestras acciones diarias y nos permiten ofrecer un servicio humano y profesional a
+              nuestros residentes y sus familias.
+            </p>
+          </div>
         </div>
 
-        <div className={style.nosotrosCard}>
-          <Users className={`${style.icon} ${style.green}`} />
-          <h2>Comunidad y Actividades</h2>
-          <p>
-            Promovemos la integración social mediante una amplia variedad de actividades recreativas, terapéuticas y culturales.
-          </p>
-        </div>
+        <h3 className={styles.teamTitle}>Nuestro Equipo</h3>
+        <div className={styles.teamContainer}>
+          <div className={styles.teamMember}>
+            <div className={styles.teamMemberImage}>
+              <Image
+                src="/imagenes/nosotros/equipo/shutterstock_2401258387.webp?height=150&width=150"
+                alt="Dr. Martínez"
+                width={150}
+                height={150}
+                className={styles.teamMemberPhoto}
+              />
+            </div>
+            <h4 className={styles.teamMemberName}>Dr. Martínez</h4>
+            <p className={styles.teamMemberRole}>Director Médico</p>
+          </div>
 
-        <div className={style.nosotrosCard}>
-          <MapPin className={`${style.icon} ${style.blue}`} />
-          <h2>Ubicación Privilegiada</h2>
-          <p>
-            Nos encontramos en un entorno tranquilo y accesible, rodeado de naturaleza y con excelentes servicios cercanos.
-          </p>
-          <button className={style.mapButton}>Ver en el mapa</button>
-        </div>
+          <div className={styles.teamMember}>
+            <div className={styles.teamMemberImage}>
+              <Image
+                src="/imagenes/nosotros/equipo/shutterstock_2401258387.webp?height=150&width=150"
+                alt="Lic. Rodríguez"
+                width={150}
+                height={150}
+                className={styles.teamMemberPhoto}
+              />
+            </div>
+            <h4 className={styles.teamMemberName}>Lic. Rodríguez</h4>
+            <p className={styles.teamMemberRole}>Enfermera Jefe</p>
+          </div>
 
-        <div className={style.nosotrosCard}>
-          <ShieldCheck className={`${style.icon} ${style.purple}`} />
-          <h2>Seguridad y Cuidado</h2>
-          <p>
-            Implementamos protocolos de seguridad y atención médica continua para garantizar el bienestar de todos nuestros residentes.
-          </p>
-        </div>
+          <div className={styles.teamMember}>
+            <div className={styles.teamMemberImage}>
+              <Image
+                src="/imagenes/nosotros/equipo/shutterstock_2401258387.webp?height=150&width=150"
+                alt="Lic. Gómez"
+                width={150}
+                height={150}
+                className={styles.teamMemberPhoto}
+              />
+            </div>
+            <h4 className={styles.teamMemberName}>Lic. Gómez</h4>
+            <p className={styles.teamMemberRole}>Fisioterapeuta</p>
+          </div>
 
-        <div className={style.nosotrosCard}>
-          <Smile className={`${style.icon} ${style.yellow}`} />
-          <h2>Ambiente Familiar</h2>
-          <p>
-            Fomentamos un entorno acogedor y familiar donde cada residente se sienta respetado, valorado y en casa.
-          </p>
+          <div className={styles.teamMember}>
+            <div className={styles.teamMemberImage}>
+              <Image
+                src="/imagenes/nosotros/equipo/shutterstock_2401258387.webp?height=150&width=150"
+                alt="Lic. Pérez"
+                width={150}
+                height={150}
+                className={styles.teamMemberPhoto}
+              />
+            </div>
+            <h4 className={styles.teamMemberName}>Lic. Pérez</h4>
+            <p className={styles.teamMemberRole}>Nutricionista</p>
+          </div>
         </div>
-      </div>
-    </div>
+      </section>
   );
 };
 
