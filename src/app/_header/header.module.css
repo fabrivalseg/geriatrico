@@ -57,8 +57,7 @@
     top: 100%;
     left: 0;
     width: 100%;
-    background-color: #46c5dfde;
-    opacity: 0.6;
+    background-color: rgba(233, 241, 250, 0.8);;
     text-align: center;
     padding: 20px 0;
     z-index: 10;
@@ -72,7 +71,7 @@
 }
 
 .navContainerResponsive .linksHeader {
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: 1.3rem;
 }
 
