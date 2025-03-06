@@ -49,7 +49,7 @@ const variant2 = {
 const Nosotros = () => {
   return (
     <section className={styles.nosotrosSection} id="nosotros">
-        <motion.h2 initial={{x: -200, opacity: 0}} transition={{duration: 0.7, type: "spring"}} animate={{x: 0, opacity: 1}} whileInView={{x: 0, opacity: 1}} className={styles.sectionTitle}>Nosotros</motion.h2>
+        <motion.h2 initial={{x: -200, opacity: 0}} transition={{duration: 0.7, type: "spring"}} whileInView={{x: 0, opacity: 1}} className={styles.sectionTitle}>Nosotros</motion.h2>
 
         <div className={styles.valuesContainer}>
           <motion.div variants={variant1} initial="initial" transition="transition" whileInView="whileInView" className={styles.valueCard}>

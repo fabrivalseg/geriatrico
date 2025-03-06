@@ -40,6 +40,7 @@
     margin: 0 auto;
   }
   
+  
   @media (min-width: 768px) {
     .servicesContainer {
       grid-template-columns: repeat(2, 1fr);

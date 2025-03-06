@@ -18,10 +18,10 @@ export default function Blog() {
         <motion.h2 initial={{x: -200, opacity: 0}} transition={{duration: 0.7, type: "spring"}} animate={{x: 0, opacity: 1}} whileInView={{x: 0, opacity: 1}} className={styles.sectionTitle}>Blog</motion.h2>
 
         <div className={styles.blogDescription}>
-          <p>
+          <motion.p initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5, ease: "easeOut" }}>
             Mantente informado sobre nuestras actividades, consejos de salud para adultos mayores, y noticias relevantes
             del sector. Compartimos regularmente contenido de interés para residentes, familiares y cuidadores.
-          </p>
+          </motion.p>
         </div>
 
         <div className={styles.blogContainer}>

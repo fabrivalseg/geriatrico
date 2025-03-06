@@ -22,8 +22,8 @@ export default function Home() {
       <section className={styles.homeSection}>
         <div className={styles.heroContainer}>
           <div className={styles.heroContent}>
-            <h1 className={styles.heroSlogan}>Cuidado y atención para sus seres queridos</h1>
-            <button className={styles.heroButton}>Ver más</button>
+            <motion.h1 initial={{x: -100, opacity: 0}} transition={{duration: 0.7}} whileInView={{x: 0, opacity: 1}} className={styles.heroSlogan}>Cuidado y atención para sus seres queridos</motion.h1>
+            <motion.button initial={{x: -100, opacity: 0}} transition={{duration: 0.7}} whileInView={{x: 0, opacity: 1}} className={styles.heroButton}>Ver más</motion.button>
           </div>
           <motion.div initial={{x: -100, opacity: 0}} transition={{duration: 0.7}} whileInView={{x: 0, opacity: 1}} className={styles.heroImageContainer}>
             <Image
