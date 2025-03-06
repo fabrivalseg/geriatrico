@@ -42,10 +42,10 @@ export default function Formulario() {
         <motion.h2 initial={{x: -200, opacity: 0}} transition={{duration: 0.7, type: "spring"}} whileInView={{x: 0, opacity: 1}} className={styles.sectionTitle}>Contacto</motion.h2>
 
         <div className={styles.contactDescription}>
-          <p>
+          <motion.p initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5, ease: "easeOut" }}>
             Estamos aquí para responder cualquier pregunta que pueda tener. Complete el
             formulario a continuación y nos pondremos en contacto con usted lo antes posible.
-          </p>
+          </motion.p>
         </div>
 
         <div className={styles.contactContainer}>
