@@ -1,10 +1,21 @@
+"use client"
 import styles from './blog.module.css';
 import Image from 'next/image';
+import {  motion } from 'framer-motion';
+
+const variant = {
+    initial: {
+        opacity: 0
+    },
+    animate: {
+        opacity: 1
+    }
+}
 
 export default function Blog() {
     return(
         <section className={styles.blogSection} id="blog">
-        <h2 className={styles.sectionTitle}>Blog</h2>
+        <motion.h2 initial={{x: -200, opacity: 0}} transition={{duration: 0.7, type: "spring"}} animate={{x: 0, opacity: 1}} whileInView={{x: 0, opacity: 1}} className={styles.sectionTitle}>Blog</motion.h2>
 
         <div className={styles.blogDescription}>
           <p>
@@ -14,7 +25,7 @@ export default function Blog() {
         </div>
 
         <div className={styles.blogContainer}>
-          <div className={styles.blogPost}>
+          <motion.div variants={variant} initial="initial" animate="animate" transition={{duration: 0.7, type: "spring"}} className={styles.blogPost}>
             <div className={styles.blogImageContainer}>
               <Image
                 src="/imagenes/blog/actividades-verano.webp?height=200&width=400"
@@ -33,9 +44,9 @@ export default function Blog() {
               </p>
               <button className={styles.blogButton}>Leer más</button>
             </div>
-          </div>
+          </motion.div>
 
-          <div className={styles.blogPost}>
+          <motion.div variants={variant} initial="initial" animate="animate" transition={{duration: 0.7, type: "spring", delay: 0.2}} className={styles.blogPost}>
             <div className={styles.blogImageContainer}>
               <Image
                 src="/imagenes/blog/actividades-verano.webp?height=200&width=400"
@@ -54,9 +65,9 @@ export default function Blog() {
               </p>
               <button className={styles.blogButton}>Leer más</button>
             </div>
-          </div>
+          </motion.div>
 
-          <div className={styles.blogPost}>
+          <motion.div variants={variant} initial="initial" animate="animate" transition={{duration: 0.7, type: "spring", delay: 0.4}} className={styles.blogPost}>
             <div className={styles.blogImageContainer}>
               <Image
                 src="/imagenes/blog/actividades-verano.webp?height=200&width=400"
@@ -75,7 +86,7 @@ export default function Blog() {
               </p>
               <button className={styles.blogButton}>Leer más</button>
             </div>
-          </div>
+          </motion.div>
         </div>
 
         <div className={styles.blogMoreContainer}>

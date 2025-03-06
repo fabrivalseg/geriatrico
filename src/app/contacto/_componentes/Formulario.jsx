@@ -1,6 +1,22 @@
 "use client";
 import { useState } from "react";
 import styles from "./formulario.module.css";
+import { motion } from "framer-motion";
+
+const variant = {
+  initial: {
+    x: -200,
+    opacity: 0,
+  },
+  transition: {
+    duration: 0.7,
+    type: "spring",
+  },
+  whileInView: {
+    x: 0,
+    opacity: 1,
+  }
+}
 
 
 export default function Formulario() {
@@ -23,7 +39,7 @@ export default function Formulario() {
 
   return (
       <section className={styles.contactoSection} id="contacto">
-        <h2 className={styles.sectionTitle}>Contacto</h2>
+        <motion.h2 initial={{x: -200, opacity: 0}} transition={{duration: 0.7, type: "spring"}} whileInView={{x: 0, opacity: 1}} className={styles.sectionTitle}>Contacto</motion.h2>
 
         <div className={styles.contactDescription}>
           <p>
@@ -34,28 +50,28 @@ export default function Formulario() {
 
         <div className={styles.contactContainer}>
           <div className={styles.contactInfo}>
-            <div className={styles.contactInfoItem}>
+            <motion.div variants={variant} initial="initial" whileInView="whileInView" transition="transition" className={styles.contactInfoItem}>
               <h3 className={styles.contactInfoTitle}>Dirección</h3>
               <p className={styles.contactInfoText}>Av. Principal 1234, Ciudad</p>
-            </div>
+            </motion.div>
 
-            <div className={styles.contactInfoItem}>
+            <motion.div variants={variant} initial="initial" whileInView="whileInView" transition="transition" className={styles.contactInfoItem}>
               <h3 className={styles.contactInfoTitle}>Teléfono</h3>
               <p className={styles.contactInfoText}>(123) 456-7890</p>
-            </div>
+            </motion.div>
 
-            <div className={styles.contactInfoItem}>
+            <motion.div variants={variant} initial="initial" whileInView="whileInView" transition="transition" className={styles.contactInfoItem}>
               <h3 className={styles.contactInfoTitle}>Email</h3>
               <p className={styles.contactInfoText}>info@residenciageriatrica.com</p>
-            </div>
+            </motion.div>
 
-            <div className={styles.contactInfoItem}>
+            <motion.div variants={variant} initial="initial" whileInView="whileInView" transition="transition" className={styles.contactInfoItem}>
               <h3 className={styles.contactInfoTitle}>Horario de visitas</h3>
               <p className={styles.contactInfoText}>Lunes a Domingo: 10:00 - 18:00</p>
-            </div>
+            </motion.div>
           </div>
 
-          <form className={styles.contactForm}>
+          <motion.form initial={{x: 200, opacity: 0}} transition={{duration: 0.7, type: "spring"}} whileInView={{x: 0, opacity: 1}} className={styles.contactForm}>
             <div className={styles.formGroup}>
               <label htmlFor="nombre" className={styles.formLabel}>Nombre completo *</label>
               <input
@@ -118,7 +134,7 @@ export default function Formulario() {
             <div className={styles.formGroup}>
               <button type="submit" className={styles.formButton}>Enviar mensaje</button>
             </div>
-          </form>
+          </motion.form>
         </div>
     </section>
   );

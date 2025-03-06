@@ -50,8 +50,9 @@ export default function Header() {
                         <nav className={style.navContainerResponsive}>
                             <Link className={style.linksHeader} href="/">Home</Link>
                             <Link className={style.linksHeader} href="/nosotros">Nosotros</Link>
+                            <Link className={style.linksHeader} href="/servicios">Servicios</Link>
+                            <Link className={style.linksHeader} href="/instalaciones">Instalaciones</Link>
                             <Link className={style.linksHeader} href="/blog">Blog</Link>
-                            <Link className={style.linksHeader} href="/contacto">Contacto</Link>
                         </nav>
                     </motion.div>
                 )}

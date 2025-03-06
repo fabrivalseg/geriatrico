@@ -1,10 +1,22 @@
+"use client"
 import styles from './instalaciones.module.css';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
+
+
+const variant = {
+  initial: {
+    opacity: 0,
+  },
+  animate: {
+    opacity: 1
+  }
+};
 
 export default function Instalaciones (){
     return(
         <section className={styles.instalacionesSection} id="instalaciones">
-        <h2 className={styles.sectionTitle}>Instalaciones</h2>
+        <motion.h2 initial={{x: -200, opacity: 0}} transition={{duration: 0.7, type: "spring"}} animate={{x: 0, opacity: 1}} whileInView={{x: 0, opacity: 1}} className={styles.sectionTitle}>Instalaciones</motion.h2>
 
         <div className={styles.facilitiesDescription}>
           <p>
@@ -15,7 +27,7 @@ export default function Instalaciones (){
         </div>
 
         <div className={styles.galleryContainer}>
-          <div className={styles.galleryItem}>
+          <motion.div variants={variant} initial="initial" animate="animate" transition={{duration: 0.7, delay: 0}} className={styles.galleryItem}>
             <Image
               src="/imagenes/instalaciones/031erraetumasaubaira-pkok3510_pedro_kok.jpg"
               alt="Habitaciones"
@@ -24,9 +36,9 @@ export default function Instalaciones (){
               className={styles.galleryImage}
             />
             <h3 className={styles.galleryTitle}>Habitaciones</h3>
-          </div>
+          </motion.div>
 
-          <div className={styles.galleryItem}>
+          <motion.div variants={variant} initial="initial" animate="animate" transition={{duration: 0.7, delay: 0.2}} className={styles.galleryItem}>
             <Image
               src="/imagenes/instalaciones/031erraetumasaubaira-pkok3510_pedro_kok.jpg"
               alt="Áreas comunes"
@@ -35,9 +47,9 @@ export default function Instalaciones (){
               className={styles.galleryImage}
             />
             <h3 className={styles.galleryTitle}>Áreas comunes</h3>
-          </div>
+          </motion.div>
 
-          <div className={styles.galleryItem}>
+          <motion.div variants={variant} initial="initial" animate="animate" transition={{duration: 0.7, delay: 0.4}} className={styles.galleryItem}>
             <Image
               src="/imagenes/instalaciones/031erraetumasaubaira-pkok3510_pedro_kok.jpg"
               alt="Jardines"
@@ -46,9 +58,9 @@ export default function Instalaciones (){
               className={styles.galleryImage}
             />
             <h3 className={styles.galleryTitle}>Jardines</h3>
-          </div>
+          </motion.div>
 
-          <div className={styles.galleryItem}>
+          <motion.div variants={variant} initial="initial" animate="animate" transition={{duration: 0.7, delay: 0.6}} className={styles.galleryItem}>
             <Image
               src="/imagenes/instalaciones/031erraetumasaubaira-pkok3510_pedro_kok.jpg"
               alt="Comedor"
@@ -57,9 +69,9 @@ export default function Instalaciones (){
               className={styles.galleryImage}
             />
             <h3 className={styles.galleryTitle}>Comedor</h3>
-          </div>
+          </motion.div>
 
-          <div className={styles.galleryItem}>
+          <motion.div variants={variant} initial="initial" animate="animate" transition={{duration: 0.7, delay: 0.8}} className={styles.galleryItem}>
             <Image
               src="/imagenes/instalaciones/031erraetumasaubaira-pkok3510_pedro_kok.jpg"
               alt="Sala de terapia"
@@ -68,9 +80,9 @@ export default function Instalaciones (){
               className={styles.galleryImage}
             />
             <h3 className={styles.galleryTitle}>Sala de terapia</h3>
-          </div>
+          </motion.div>
 
-          <div className={styles.galleryItem}>
+          <motion.div variants={variant} initial="initial" animate="animate" transition={{duration: 0.7, delay: 1}} className={styles.galleryItem}>
             <Image
               src="/imagenes/instalaciones/031erraetumasaubaira-pkok3510_pedro_kok.jpg"
               alt="Sala de actividades"
@@ -79,7 +91,7 @@ export default function Instalaciones (){
               className={styles.galleryImage}
             />
             <h3 className={styles.galleryTitle}>Sala de actividades</h3>
-          </div>
+          </motion.div>
         </div>
       </section>
     )
