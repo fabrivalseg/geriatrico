@@ -3,7 +3,7 @@ import Header from "./_header/Header";
 import Footer from "./_footer/Footer";
 
 export const metadata = {
-  title: "Residencia Geriátrica | Cuidado y atención para adultos mayores | Geriatrico en Cordoba",
+  title: "Residencia Geriátrica | Cuidado y atención para adultos mayores | Geriatrico en Rio Segundo, Cordoba, Argentina",
   description:
     "Ofrecemos servicios de cuidado integral para adultos mayores en un ambiente acogedor y seguro. Atención médica 24/7, actividades recreativas y más.",
   keywords:
@@ -51,6 +51,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" type="image/x-icon" href="/imagenes/logo/logo.png" />
+      </head>
       <body>
         <Header />
         <main>
