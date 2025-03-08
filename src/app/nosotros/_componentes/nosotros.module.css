@@ -31,6 +31,7 @@
   margin: 0 auto 4rem auto;
 }
 
+
 @media (min-width: 768px) {
   .valuesContainer {
     grid-template-columns: repeat(3, 1fr);
@@ -64,9 +65,11 @@
   margin-bottom: 1.5rem;
 }
 
+
 .valueIcon {
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: auto;
+  border-radius: 4px;
 }
 
 .valueTitle {
@@ -137,4 +140,5 @@
 .teamMemberRole {
   font-size: 0.9rem;
   color: #3498db;
+  text-shadow: 1px 0px 0px rgba(0, 0, 0, 0.3);
 }

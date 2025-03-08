@@ -57,8 +57,9 @@ const Nosotros = () => {
               <Image
                 src="/imagenes/nosotros/mision-vision-valores/Misión.webp?height=80&width=80"
                 alt="Misión"
-                width={80}
-                height={80}
+                width={0}
+                height={0}
+                sizes="100vw"
                 className={styles.valueIcon}
               />
             </div>
@@ -74,8 +75,9 @@ const Nosotros = () => {
               <Image
                 src="/imagenes/nosotros/mision-vision-valores/vision.png"
                 alt="Visión"
-                width={80}
-                height={80}
+                width={0}
+                height={0}
+                sizes="100vw"
                 className={styles.valueIcon}
               />
             </div>
@@ -92,8 +94,9 @@ const Nosotros = () => {
               <Image
                 src="/imagenes/nosotros/mision-vision-valores/valores.jpeg?height=80&width=80"
                 alt="Valores"
-                width={80}
-                height={80}
+                width={0}
+                height={0}
+                sizes="100vw"
                 className={styles.valueIcon}
               />
             </div>
