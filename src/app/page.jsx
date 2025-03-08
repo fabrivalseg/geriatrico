@@ -16,7 +16,9 @@ const variant = {
   }
 }
 
+  
 export default function Home() {
+
   return (
     <>
       <section className={styles.homeSection}>
