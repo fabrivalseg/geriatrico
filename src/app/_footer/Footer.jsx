@@ -2,6 +2,7 @@
 import style from "./footer.module.css";
 import { motion } from "framer-motion";
 import { FaWhatsapp, FaInstagram } from "react-icons/fa";
+import Image from "next/image";
 
 const variant = {
     initial: {y: 20},
@@ -13,8 +14,8 @@ export default function Footer(){
     return(
         <footer className={style.footerContainer}>
             <div className={style.footer}>
-            <motion.div className={style.imagenContainerFooter} variants={variant} initial="initial" transition="transition" whileInView="whileInView">
-                    <img className={style.imagenFooter} src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Wikimedia_Brand_Guidelines_Update_2022_Wikimedia_Logo_Brandmark.png" alt="Logo" />
+                 <motion.div className={style.imagenContainerFooter} variants={variant} initial="initial" transition="transition" whileInView="whileInView">
+                    <Image className={style.imagenFooter} width={0} height={0} sizes="100vw"  src="/imagenes/logo/logo.png" alt="Logo" />
                 </motion.div>
                 <motion.div className={style.linksFooterContainer} variants={variant} initial="initial" transition="transition" whileInView="whileInView">
                     <motion.a className={style.linksFooter} whileHover={{scale: 1.1}} href="/">Home</motion.a>

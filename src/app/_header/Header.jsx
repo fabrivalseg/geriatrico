@@ -4,6 +4,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import style from "./header.module.css";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 export default function Header() {
     const [menu, setMenu] = useState(false);
@@ -22,10 +23,13 @@ export default function Header() {
         <header className={style.headerContainer}>
             <motion.div variants={variant} initial="initial" transition="transition" whileInView="whileInView" className={style.topBar}>
                 <div className={style.imagenContainer}>
-                    <img
+                    <Image
                         className={style.imagenHeader}
-                        src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Wikimedia_Brand_Guidelines_Update_2022_Wikimedia_Logo_Brandmark.png"
+                        src="/imagenes/logo/logo.png"
                         alt="Logo"
+                        width={0} 
+                        height={0}
+                        sizes="100vw"
                     />
                 </div>
                 <GiHamburgerMenu onClick={mostrarMenu} className={style.iconoResponsive} />
