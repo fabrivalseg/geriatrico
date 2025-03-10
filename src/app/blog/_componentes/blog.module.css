@@ -3,9 +3,8 @@
     font-weight: 700;
     text-align: center;
     margin-bottom: 2rem;
-    color: #2c3e50;
+    color: rgb(63, 89, 77);
     position: relative;
-    font-family: var(--font-the-seasons);
   }
   
   .sectionTitle::after {
@@ -92,7 +91,7 @@
   
   .blogDate {
     font-size: 0.9rem;
-    color: rgb(192, 208, 180);
+    color: rgb(155, 175, 140);
     margin-bottom: 0.5rem;
     text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
   }
@@ -103,7 +102,6 @@
     color: #2c3e50;
     margin-bottom: 1rem;
     line-height: 1.4;
-    font-family: var(--font-the-seasons);
   }
   
   .blogExcerpt {
@@ -141,7 +139,7 @@
   }
   
   .blogMoreButton {
-    background-color: rgb(192, 208, 180);
+    background-color: rgb(134, 158, 114);;
     color: white;
     border: none;
     padding: 0.8rem 2rem;
@@ -150,11 +148,10 @@
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   }
   
   .blogMoreButton:hover {
-    background-color: rgb(164, 184, 148);
+    background-color: rgb(118, 139, 101);
     transform: translateY(-3px);
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
   }

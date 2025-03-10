@@ -3,9 +3,8 @@
   font-weight: 700;
   text-align: center;
   margin-bottom: 2rem;
-  color: #2c3e50;
+  color: rgb(63, 89, 77);
   position: relative;
-  font-family: var(--font-the-seasons);
 }
 
 .sectionTitle::after {
@@ -68,11 +67,10 @@
 .contactInfoTitle {
   font-size: 1.2rem;
   font-weight: 600;
-  color: #2c3e50;
+  color: rgb(63, 89, 77);
   margin-bottom: 0.5rem;
   position: relative;
   padding-bottom: 0.5rem;
-  font-family: var(--font-the-seasons);
 }
 
 .contactInfoTitle::after {
@@ -106,9 +104,8 @@
   display: block;
   font-size: 1rem;
   font-weight: 600;
-  color: #2c3e50;
+  color: rgb(63, 89, 77);
   margin-bottom: 0.5rem;
-  font-family: var(--font-the-seasons);
 }
 
 .formInput,
@@ -140,7 +137,7 @@
 }
 
 .formButton {
-  background-color: rgb(192, 208, 180);
+  background-color: rgb(170, 187, 156);
   color: white;
   border: none;
   padding: 0.8rem 2rem;
@@ -151,11 +148,10 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   width: 100%;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  font-family: var(--font-montserrat);
 }
 
 .formButton:hover {
-  background-color: rgb(164, 184, 148);
+  background-color: rgb(150, 171, 134);
   opacity: 0.9;
   transform: translateY(-3px);
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);

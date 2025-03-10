@@ -27,7 +27,7 @@ export default function Footer(){
                 <motion.div className={style.contactoFooterContainer} variants={variant} initial="initial" transition="transition" whileInView="whileInView">
                     <motion.p className={style.contactoFooter} whileHover={{scale: 1.1}}>Direccion: Sarmiento 1972</motion.p>
                     <motion.p className={style.contactoFooter} whileHover={{scale: 1.1}}>Telefono: 3517169604</motion.p>
-                    <motion.p className={style.contactoFooter} whileHover={{scale: 1.1}}>Email: fabri@gmail.com</motion.p>
+                    <motion.p className={style.contactoFooter} whileHover={{scale: 1.1}}>Email: calidiaresidenciasenior@gmail.com</motion.p>
                 </motion.div>
                 <motion.div className={style.redesContainer} variants={variant} initial="initial" transition="transition" whileInView="whileInView">
                     <FaWhatsapp className={style.redesFooter}/>

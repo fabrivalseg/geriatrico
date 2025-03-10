@@ -3,9 +3,8 @@
   font-weight: 700;
   text-align: center;
   margin-bottom: 2rem;
-  color: #2c3e50;
+  color: rgb(63, 89, 77);
   position: relative;
-  font-family: var(--font-the-seasons);
 }
 
 .sectionTitle::after {
@@ -21,7 +20,6 @@
 
 .serviciosSection {
     padding: 5rem 1rem;
-    background-color: #f8f9fa;
   }
   
   .servicesDescription {
@@ -31,7 +29,6 @@
     font-size: 1.1rem;
     line-height: 1.6;
     color: #555;
-    font-family: var(--font-montserrat);
   }
   
   .servicesContainer {
@@ -56,7 +53,6 @@
   }
   
   .serviceItem {
-    background-color: white;
     padding: 1.5rem;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
@@ -71,11 +67,10 @@
   .serviceTitle {
     font-size: 1.3rem;
     font-weight: 600;
-    color: #2c3e50;
+    color: rgb(63, 89, 77);
     margin-bottom: 1rem;
     position: relative;
     padding-bottom: 0.5rem;
-    font-family: var(--font-the-seasons);
   }
   
   .serviceTitle::after {
@@ -85,7 +80,7 @@
     left: 0;
     width: 40px;
     height: 2px;
-    background-color: #3498db;
+    background-color: rgb(63, 89, 77);
   }
   
   .serviceDescription {
