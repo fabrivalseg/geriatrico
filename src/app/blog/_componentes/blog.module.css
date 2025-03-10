@@ -5,6 +5,7 @@
     margin-bottom: 2rem;
     color: #2c3e50;
     position: relative;
+    font-family: var(--font-the-seasons);
   }
   
   .sectionTitle::after {
@@ -15,7 +16,7 @@
     transform: translateX(-50%);
     width: 80px;
     height: 3px;
-    background-color: #3498db;
+    background-color: rgb(63, 89, 77);
   }
   
 .blogSection {
@@ -52,7 +53,7 @@
   }
   
   .blogPost {
-    background-color: white;
+    background-color: rgb(251, 245, 232);
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -91,17 +92,18 @@
   
   .blogDate {
     font-size: 0.9rem;
-    color: #3498db;
+    color: rgb(192, 208, 180);
     margin-bottom: 0.5rem;
     text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
   }
   
   .blogTitle {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     font-weight: 600;
     color: #2c3e50;
     margin-bottom: 1rem;
     line-height: 1.4;
+    font-family: var(--font-the-seasons);
   }
   
   .blogExcerpt {
@@ -115,7 +117,7 @@
   .blogButton {
     align-self: flex-start;
     background-color: transparent;
-    color: #3498db;
+    color: rgb(192, 208, 180);
     border: none;
     padding: 0;
     font-size: 1rem;
@@ -128,7 +130,7 @@
   }
   
   .blogButton:hover {
-    color: #2980b9;
+    color: rgb(164, 184, 148);
     text-decoration: underline;
   }
   
@@ -139,7 +141,7 @@
   }
   
   .blogMoreButton {
-    background-color: #3498db;
+    background-color: rgb(192, 208, 180);
     color: white;
     border: none;
     padding: 0.8rem 2rem;
@@ -152,7 +154,7 @@
   }
   
   .blogMoreButton:hover {
-    background-color: #2980b9;
+    background-color: rgb(164, 184, 148);
     transform: translateY(-3px);
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
   }

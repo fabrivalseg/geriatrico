@@ -1,8 +1,29 @@
+/*paleta
+  Gray-Asparagus(verdoso):  RGB: (R63, G89, B77) HEX: #3F594D
+  Pale Silver(verde claro): RGB: (R192, G208, B180) HEX: #C0D0B4
+  Old Lace(blanco): RGB: (R251, G245, B232), HEX: #FBF5E8 
+*/
+
+@font-face {
+  font-family: 'The Seasons';
+  src: url('/fonts/TheSeasons-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Aviano';
+  src: url('/fonts/Aviano-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Arial', sans-serif;
+  font-family: var(--font-montserrat);
 }
 
 html, body{
@@ -15,7 +36,7 @@ html, body{
     "main"
     "footer";
   grid-template-rows: 1fr 6fr 1fr;
-  background-color: #f8f9fa;
+  background-color: rgb(251, 245, 232);
   color: #333;
 }
 
@@ -26,7 +47,7 @@ html{
 main{
   height: 100%;
   width: 100%;
-  
+  background-color: rgb(251, 245, 232);
 }
 
 

@@ -1,4 +1,5 @@
 import "./globals.css";
+import { montserrat,theSeasons, aviano } from "./fonts/fonts";
 import Header from "./_header/Header";
 import Footer from "./_footer/Footer";
 
@@ -50,12 +51,12 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="es" className={`${theSeasons.variable} ${aviano.variable} ${montserrat.variable}`}>
       <head>
         <link rel="icon" type="image/x-icon" href="/imagenes/logo/logo.png" />
       </head>
       <body>
-        <Header />
+        <Header /> 
         <main>
           {children}
         </main>

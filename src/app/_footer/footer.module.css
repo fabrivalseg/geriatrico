@@ -1,7 +1,7 @@
 .footerContainer{
     width: 100%;
     height: 100%;
-    background-color: #647183;
+    background-color: rgb(63, 89, 77);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,14 +20,13 @@
 }
 
 .imagenContainerFooter{
-    height: 50px;
+    height: 70px;
     width: auto;
 }
 
 .imagenFooter{
     height: 100%;
     width: 100%;
-    border-radius: 50%;
 }
 
 .linksFooterContainer, .contactoFooterContainer{
@@ -45,6 +44,11 @@
     color: white;
     text-decoration: none;
     padding: 3px;
+    font-family: var(--font-montserrat);
+}
+
+.contactoFooter{
+    max-width: 110px;
 }
 
 .redesContainer{
@@ -53,7 +57,7 @@
     align-items: center;
     gap: 10px;
     height: 100%;
-    width: 10%;
+    width: 140px;
 }
 
 .redesFooter{
@@ -88,7 +92,7 @@
     }
 
     .imagenFooter{
-        width: 70px;
+        width: 140px;
         height: auto;
     }
 
@@ -96,12 +100,16 @@
         width: 100%;
         border-bottom: 1px solid rgb(86, 86, 86);
         padding-bottom: 15px;
-        font-size: 1.1rem;
+    
     }
 
     .redesContainer{
-        width: 40%;
+        width: 140px;
         gap: 20px;
+    }
+
+    .contactoFooter{
+        max-width: 100%;
     }
 
 }

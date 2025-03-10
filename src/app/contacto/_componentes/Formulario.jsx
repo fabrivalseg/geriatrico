@@ -63,6 +63,7 @@ export default function Formulario() {
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
+          style={{fontFamily: "var(--font-montserrat)"}}
         >
           Estamos aquí para responder cualquier pregunta que pueda tener. Complete el
           formulario a continuación y nos pondremos en contacto con usted lo antes posible.

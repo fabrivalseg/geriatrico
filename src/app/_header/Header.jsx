@@ -25,7 +25,7 @@ export default function Header() {
                 <div className={style.imagenContainer}>
                     <Image
                         className={style.imagenHeader}
-                        src="/imagenes/logo/logo.png"
+                        src="/imagenes/logo/calidia_logo.png"
                         alt="Logo"
                         width={0} 
                         height={0}

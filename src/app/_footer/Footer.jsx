@@ -15,7 +15,7 @@ export default function Footer(){
         <footer className={style.footerContainer}>
             <div className={style.footer}>
                  <motion.div className={style.imagenContainerFooter} variants={variant} initial="initial" transition="transition" whileInView="whileInView">
-                    <Image className={style.imagenFooter} width={0} height={0} sizes="100vw"  src="/imagenes/logo/logo.png" alt="Logo" />
+                    <Image className={style.imagenFooter} width={0} height={0} sizes="100vw"  src="/imagenes/logo/calidia_logo_bajada.png" alt="Logo" />
                 </motion.div>
                 <motion.div className={style.linksFooterContainer} variants={variant} initial="initial" transition="transition" whileInView="whileInView">
                     <motion.a className={style.linksFooter} whileHover={{scale: 1.1}} href="/">Home</motion.a>

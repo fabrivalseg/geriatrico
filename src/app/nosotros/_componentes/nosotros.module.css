@@ -5,6 +5,7 @@
   margin-bottom: 2rem;
   color: #2c3e50;
   position: relative;
+  font-family: var(--font-the-seasons);
 }
 
 .sectionTitle::after {
@@ -15,12 +16,11 @@
   transform: translateX(-50%);
   width: 80px;
   height: 3px;
-  background-color: #3498db;
+  background-color: rgb(63, 89, 77);
 }
 
 .nosotrosSection {
   padding: 5rem 1rem;
-  background-color: #f8f9fa;
 }
 
 .valuesContainer {
@@ -39,7 +39,6 @@
 }
 
 .valueCard {
-  background-color: white;
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
@@ -57,7 +56,7 @@
 .valueIconContainer {
   width: 100px;
   height: 100px;
-  background-color: #e8f4fc;
+  background-color: rgb(192, 208, 180);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -77,12 +76,14 @@
   font-weight: 600;
   color: #2c3e50;
   margin-bottom: 1rem;
+  font-family: var(--font-the-seasons);
 }
 
 .valueDescription {
   font-size: 1rem;
   line-height: 1.6;
   color: #555;
+  font-family: var(--font-montserrat);
 }
 
 .teamTitle {
@@ -91,6 +92,7 @@
   text-align: center;
   margin-bottom: 2.5rem;
   color: #2c3e50;
+  font-family: var(--font-the-seasons);
 }
 
 .teamContainer {
@@ -135,10 +137,12 @@
   font-weight: 600;
   color: #2c3e50;
   margin-bottom: 0.3rem;
+  font-family: var(--font-the-seasons);
 }
 
 .teamMemberRole {
   font-size: 0.9rem;
-  color: #3498db;
+  color: rgb(192, 208, 180);;
   text-shadow: 1px 0px 0px rgba(0, 0, 0, 0.3);
+  font-family: var(--font-montserrat);
 }
