@@ -32,7 +32,7 @@
 .linksFooterContainer, .contactoFooterContainer{
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: column;
     height: 100%;
     gap: 4px;
@@ -45,11 +45,10 @@
     text-decoration: none;
     padding: 3px;
     font-family: var(--font-montserrat);
+    text-align: start;
 }
 
-.contactoFooter{
-    max-width: 110px;
-}
+
 
 .redesContainer{
     display: flex;
@@ -97,6 +96,7 @@
     }
 
     .linksFooterContainer, .contactoFooterContainer{
+        align-items: center;
         width: 100%;
         border-bottom: 1px solid rgb(86, 86, 86);
         padding-bottom: 15px;
@@ -111,6 +111,13 @@
     .contactoFooter{
         max-width: 100%;
     }
+
+    .spanInfo{
+        text-align: center;
+    }
+.contactoFooter{
+    text-align: center;
+}
 
 }
 
