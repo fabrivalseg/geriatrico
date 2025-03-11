@@ -1,5 +1,6 @@
 .homeSection {
     padding: 0 0 4rem 0;
+    overflow-x: hidden;
   }
   
   .heroContainer {
@@ -77,6 +78,9 @@
     .questionsContainer {
       grid-template-columns: 1fr 1fr;
     }
+
+  
+
   }
   
   .questionBox {

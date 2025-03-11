@@ -180,6 +180,10 @@
   .teamTitle {
     font-size: 1.8rem;
   }
+
+  .contactoSection{
+    overflow-x: hidden;
+  }
 }
 
 @media (max-width: 576px) {
