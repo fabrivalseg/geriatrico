@@ -46,6 +46,7 @@
     padding: 3px;
     font-family: var(--font-montserrat);
     text-align: start;
+    cursor: pointer;
 }
 
 

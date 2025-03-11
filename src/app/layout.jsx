@@ -53,7 +53,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="es" className={`${theSeasons.variable} ${aviano.variable} ${montserrat.variable}`}>
       <head>
-        <link rel="icon" type="image/x-icon" href="/imagenes/logo/logo.png" />
+        <link rel="icon" type="image/x-icon" href="./imagenes/logo/favicon.ico" />
       </head>
       <body>
         <Header /> 
