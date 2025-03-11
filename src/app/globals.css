@@ -54,7 +54,6 @@ main{
  html, body{
     position: relative;
     max-width: 100vh;
-    overflow-x: clip;
  }
 
 
