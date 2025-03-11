@@ -1,7 +1,8 @@
 "use client"
 import styles from './blog.module.css';
 import Image from 'next/image';
-import {  motion } from 'framer-motion';
+import {  motion, AnimatePresence } from 'framer-motion';
+import { useState } from 'react';
 
 const variant = {
     initial: {
@@ -12,7 +13,23 @@ const variant = {
     }
 }
 
+const blogPosts = [{image: "/imagenes/blog/actividades-verano.webp?height=200&width=400", alt: "Actividades de verano", date: "15 de Junio, 2023", title: "Actividades de verano para nuestros residentes 1", excerpt: "Este verano hemos preparado un programa especial de actividades al aire libre para aprovechar el buen tiempo y fomentar el bienestar de nuestros residentes", content: "Contenido completo del artículo 3, con todos los datos ampliados..."},
+  {image: "/imagenes/blog/actividades-verano.webp?height=200&width=400", alt: "Actividades de verano", date: "15 de Junio, 2023", title: "Actividades de verano para nuestros residentes 2", excerpt: "Este verano hemos preparado un programa especial de actividades al aire libre para aprovechar el buen tiempo y fomentar el bienestar de nuestros residentes", content: "Contenido completo del artículo 3, con todos los datos ampliados..."},
+  {image: "/imagenes/blog/actividades-verano.webp?height=200&width=400", alt: "Actividades de verano", date: "15 de Junio, 2023", title: "Actividades de verano para nuestros residentes 3", excerpt: "Este verano hemos preparado un programa especial de actividades al aire libre para aprovechar el buen tiempo y fomentar el bienestar de nuestros residentes", content: "Contenido completo del artículo 3, con todos los datos ampliados..."}
+];
+const moreBlogPosts = [{image: "/imagenes/blog/actividades-verano.webp?height=200&width=400", alt: "Actividades de verano", date: "15 de Junio, 2023", title: "Actividades de verano para nuestros residentes 4", excerpt: "Este verano hemos preparado un programa especial de actividades al aire libre para aprovechar el buen tiempo y fomentar el bienestar de nuestros residentes", content: "Contenido completo del artículo 3, con todos los datos ampliados..."}];
+
 export default function Blog() {
+    const [mas, setMas] = useState(false);
+    const [expandedIndexes, setExpandedIndexes] = useState({});
+
+    const toggleExpand = (index) => {
+      setExpandedIndexes((prev) => ({
+        ...prev,
+        [index]: !prev[index],
+      }));
+    };
+
     return(
         <section className={styles.blogSection} id="blog">
         <motion.h2 initial={{x: -200, opacity: 0}} transition={{duration: 0.7, type: "spring"}} animate={{x: 0, opacity: 1}} whileInView={{x: 0, opacity: 1}} className={styles.sectionTitle}>Blog</motion.h2>
@@ -25,72 +42,84 @@ export default function Blog() {
         </div>
 
         <div className={styles.blogContainer}>
-          <motion.div variants={variant} initial="initial" animate="animate" transition={{duration: 0.7, type: "spring"}} className={styles.blogPost}>
-            <div className={styles.blogImageContainer}>
-              <Image
-                src="/imagenes/blog/actividades-verano.webp?height=200&width=400"
-                alt="Actividades de verano"
-                width={400}
-                height={200}
-                className={styles.blogImage}
-              />
-            </div>
-            <div className={styles.blogContent}>
-              <span className={styles.blogDate}>15 de Junio, 2023</span>
-              <h3 className={styles.blogTitle}>Actividades de verano para nuestros residentes</h3>
-              <p className={styles.blogExcerpt}>
-                Este verano hemos preparado un programa especial de actividades al aire libre para aprovechar el buen
-                tiempo y fomentar el bienestar de nuestros residentes...
-              </p>
-              <button className={styles.blogButton}>Leer más</button>
-            </div>
-          </motion.div>
-
-          <motion.div variants={variant} initial="initial" animate="animate" transition={{duration: 0.7, type: "spring", delay: 0.2}} className={styles.blogPost}>
-            <div className={styles.blogImageContainer}>
-              <Image
-                src="/imagenes/blog/actividades-verano.webp?height=200&width=400"
-                alt="Nutrición para adultos mayores"
-                width={400}
-                height={200}
-                className={styles.blogImage}
-              />
-            </div>
-            <div className={styles.blogContent}>
-              <span className={styles.blogDate}>28 de Mayo, 2023</span>
-              <h3 className={styles.blogTitle}>Nutrición adecuada para adultos mayores</h3>
-              <p className={styles.blogExcerpt}>
-                La alimentación juega un papel fundamental en la salud de las personas mayores. En este artículo,
-                nuestra nutricionista comparte consejos importantes...
-              </p>
-              <button className={styles.blogButton}>Leer más</button>
-            </div>
-          </motion.div>
-
-          <motion.div variants={variant} initial="initial" animate="animate" transition={{duration: 0.7, type: "spring", delay: 0.4}} className={styles.blogPost}>
-            <div className={styles.blogImageContainer}>
-              <Image
-                src="/imagenes/blog/actividades-verano.webp?height=200&width=400"
-                alt="Celebración del Día del Abuelo"
-                width={400}
-                height={200}
-                className={styles.blogImage}
-              />
-            </div>
-            <div className={styles.blogContent}>
-              <span className={styles.blogDate}>10 de Mayo, 2023</span>
-              <h3 className={styles.blogTitle}>Celebración del Día del Abuelo</h3>
-              <p className={styles.blogExcerpt}>
-                El pasado fin de semana celebramos el Día del Abuelo con una fiesta especial que contó con música en
-                vivo, baile y la visita de familiares...
-              </p>
-              <button className={styles.blogButton}>Leer más</button>
-            </div>
-          </motion.div>
+          {
+            blogPosts && blogPosts.map((post, index) => (
+              <motion.div key={post.title} variants={variant} initial="initial" animate="animate" transition={{duration: 0.7, type: "spring"}} className={styles.blogPost}>
+                <div className={styles.blogImageContainer}>
+                <Image
+                  src={post.image}
+                  alt={post.alt}
+                  width={400}
+                  height={200}
+                  className={styles.blogImage}
+                />
+                </div>
+                <div className={styles.blogContent}>
+                  <span className={styles.blogDate}>{post.date}</span>
+                  <h3 className={styles.blogTitle}>{post.title}</h3>
+                  <p className={styles.blogExcerpt}>
+                    {post.excerpt}
+                  </p>
+                    <AnimatePresence>
+                      {expandedIndexes[index] && (
+                        <motion.p
+                          initial={{ opacity: 0, height: 0 }}
+                          animate={{ opacity: 1, height: "auto" }}
+                          exit={{ opacity: 0, height: 0 }}
+                          transition={{ duration: 0.5 }}
+                          className={styles.blogFullContent}
+                        >
+                          {post.content}
+                        </motion.p>
+                      )}
+                    </AnimatePresence>
+                  <button onClick={() => toggleExpand(index)} className={styles.blogButton}>{expandedIndexes[index] ? "Ver menos" : "Leer más"}</button>
+                </div>
+              </motion.div>
+            ))
+          }
+          <AnimatePresence>
+          {
+            mas && moreBlogPosts.map((post, index) => (
+              <motion.div key={post.title} variants={variant} initial="initial" animate="animate" transition={{duration: 0.7, type: "spring"}} exit={{opacity: 0}} className={styles.blogPost}>
+                <div className={styles.blogImageContainer}>
+                  <Image
+                    src={post.image}
+                    alt={post.alt}
+                    width={400}
+                    height={200}
+                    className={styles.blogImage}
+                  />
+                </div>
+                <div className={styles.blogContent}>
+                  <span className={styles.blogDate}>{post.date}</span>
+                  <h3 className={styles.blogTitle}>{post.title}</h3>
+                  <p className={styles.blogExcerpt}>
+                    {post.excerpt}
+                  </p>
+                    <AnimatePresence>
+                      {expandedIndexes[index] && (
+                        <motion.p
+                          initial={{ opacity: 0, height: 0 }}
+                          animate={{ opacity: 1, height: "auto" }}
+                          exit={{ opacity: 0, height: 0 }}
+                          transition={{ duration: 0.5 }}
+                          className={styles.blogFullContent}
+                        >
+                          {post.content}
+                        </motion.p>
+                      )}
+                    </AnimatePresence>
+                  <button onClick={() => toggleExpand(index)} className={styles.blogButton}>{expandedIndexes[index] ? "Ver menos" : "Leer más"}</button>
+                </div>
+              </motion.div>
+            ))
+          }
+          </AnimatePresence>
         </div>
 
         <div className={styles.blogMoreContainer}>
-          <button className={styles.blogMoreButton}>Ver más artículos</button>
+          <button onClick={() => setMas(!mas)} className={styles.blogMoreButton}>{mas ? "Ver menos artículos" : "Ver más artículos"}</button>
         </div>
       </section>
     )
