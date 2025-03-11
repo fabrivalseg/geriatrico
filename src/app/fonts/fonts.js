@@ -9,13 +9,13 @@ export const montserrat = Montserrat({
   });
 
 export const theSeasons = localFont({
-  src: './TheSeasons-Regular.otf',
+  src: './TheSeasons-Regular.woff2',
   variable: '--font-the-seasons',
   display: 'swap',
 });
 
 export const aviano = localFont({
-  src: './Aviano-Regular.otf',
+  src: './Aviano-Regular.woff2',
   variable: '--font-aviano',
   display: 'swap',
 });

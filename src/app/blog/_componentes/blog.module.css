@@ -20,6 +20,7 @@
   
 .blogSection {
     padding: 5rem 1rem;
+    overflow-x: hidden;
   }
   
   .blogDescription {
