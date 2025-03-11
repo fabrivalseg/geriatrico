@@ -52,7 +52,9 @@ main{
 
 @media screen and (max-width: 768px) {
  html, body{
-    overflow-x: hidden;
+    position: relative;
+    max-width: 100vh;
+    overflow-x: clip;
  }
 
 
