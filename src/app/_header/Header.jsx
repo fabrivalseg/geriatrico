@@ -23,13 +23,14 @@ export default function Header() {
         <header className={style.headerContainer}>
             <motion.div variants={variant} initial="initial" transition="transition" whileInView="whileInView" className={style.topBar}>
                 <div className={style.imagenContainer}>
-                    <Image
+                    <img
                         className={style.imagenHeader}
                         src="/imagenes/logo/calidia_logo.png"
                         alt="Logo"
                         width={0} 
                         height={0}
                         sizes="100vw"
+                        loading="lazy"
                     />
                 </div>
                 <GiHamburgerMenu onClick={mostrarMenu} className={style.iconoResponsive} />
