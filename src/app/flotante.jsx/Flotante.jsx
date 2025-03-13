@@ -1,6 +1,6 @@
 "use client"
 import styles from "./flotante.module.css";
-import { FaInstagram } from "react-icons/fa";
+import { FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { MdOutlineContactSupport } from "react-icons/md";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
@@ -30,6 +30,16 @@ export default function Flotante() {
                         exit={{ opacity: 0, y: 20 }}
                         transition={{ duration: 0.3 }}
                     >
+                        <motion.a
+                            href="https://wa.me/3517169604"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={styles.iconoLink}
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.95 }}
+                        >
+                            <FaWhatsapp className={styles.iconoFlotante} />
+                        </motion.a>
                         <motion.a
                             href="https://wa.me/3517169604"
                             target="_blank"
