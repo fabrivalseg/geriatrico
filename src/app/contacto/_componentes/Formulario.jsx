@@ -2,6 +2,7 @@
 import { useState } from "react";
 import styles from "./formulario.module.css";
 import { motion } from "framer-motion";
+import { FaWhatsapp } from "react-icons/fa";
 
 const variant = {
   initial: {
@@ -65,14 +66,13 @@ export default function Formulario() {
           transition={{ duration: 0.5, ease: "easeOut" }}
           style={{fontFamily: "var(--font-montserrat)"}}
         >
-          Estamos aquí para responder cualquier pregunta que pueda tener. Complete el
-          formulario a continuación y nos pondremos en contacto con usted lo antes posible.
+          Estamos aquí para responder cualquier pregunta que pueda tener. <strong>Este formulario enviará tu mensaje directamente a nuestro WhatsApp y sera respondido lo antes posible.</strong>
         </motion.p>
       </div>
 
       <div className={styles.contactContainer}>
         <div className={styles.contactInfo}>
-          <motion.div
+        <motion.div
             variants={variant}
             initial="initial"
             whileInView="whileInView"
@@ -81,7 +81,21 @@ export default function Formulario() {
           >
             <h3 className={styles.contactInfoTitle}>Dirección</h3>
             <p className={styles.contactInfoText}>Av. Principal 1234, Ciudad</p>
+            
+            <div className={styles.mapaContainer}>
+              <iframe
+                title="Ubicación en Google Maps"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3163.032672436424!2d-122.08424968469229!3d37.42199997982539!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb5cfb45ffb63%3A0x1c8b6bc447ddb5bb!2sGoogleplex!5e0!3m2!1ses-419!2sar!4v1678105978119!5m2!1ses-419!2sar"
+                width="100%"
+                height="200"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
           </motion.div>
+
 
           <motion.div
             variants={variant}
@@ -194,7 +208,7 @@ export default function Formulario() {
           </div>
 
           <div className={styles.formGroup}>
-            <button type="submit" className={styles.formButton}>Enviar mensaje</button>
+            <button type="submit" className={styles.formButton}><FaWhatsapp style={{ marginRight: "8px" }} />Enviar mensaje</button>
           </div>
         </motion.form>
       </div>

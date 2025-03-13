@@ -2,8 +2,13 @@
 import Contacto from "./contacto/_componentes/Formulario";
 import styles from "./page.module.css";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { redirect } from "next/navigation";
+import { FaWhatsapp, FaInstagram } from "react-icons/fa";
+import { MdOutlineContactSupport } from "react-icons/md";
+import { useState } from "react";
+import Flotante from "./flotante.jsx/Flotante";
+
 
 
 
@@ -19,7 +24,6 @@ const variant = {
 
   
 export default function Home() {
-
   return (
     <>
       <section className={styles.homeSection}>
@@ -64,7 +68,7 @@ export default function Home() {
         </div>
       </section>
       <Contacto />
-      
+      <Flotante/>
     </>
   );
 }

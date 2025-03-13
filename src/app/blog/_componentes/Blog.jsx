@@ -3,6 +3,7 @@ import styles from './blog.module.css';
 import Image from 'next/image';
 import {  motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
+import Flotante from '@/app/flotante.jsx/Flotante';
 
 const variant = {
     initial: {
@@ -31,58 +32,22 @@ export default function Blog() {
     };
 
     return(
-        <section className={styles.blogSection} id="blog">
-        <motion.h2 initial={{x: -200, opacity: 0}} transition={{duration: 0.7, type: "spring"}} animate={{x: 0, opacity: 1}} whileInView={{x: 0, opacity: 1}} className={styles.sectionTitle}>Blog</motion.h2>
+        <>
+          <section className={styles.blogSection} id="blog">
+          <motion.h2 initial={{x: -200, opacity: 0}} transition={{duration: 0.7, type: "spring"}} animate={{x: 0, opacity: 1}} whileInView={{x: 0, opacity: 1}} className={styles.sectionTitle}>Blog</motion.h2>
 
-        <div className={styles.blogDescription}>
-          <motion.p initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5, ease: "easeOut" }}>
-            Mantente informado sobre nuestras actividades, consejos de salud para adultos mayores, y noticias relevantes
-            del sector. Compartimos regularmente contenido de interés para residentes, familiares y cuidadores.
-          </motion.p>
-        </div>
+          <div className={styles.blogDescription}>
+            <motion.p initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5, ease: "easeOut" }}>
+              Mantente informado sobre nuestras actividades, consejos de salud para adultos mayores, y noticias relevantes
+              del sector. Compartimos regularmente contenido de interés para residentes, familiares y cuidadores.
+            </motion.p>
+          </div>
 
-        <div className={styles.blogContainer}>
-          {
-            blogPosts && blogPosts.map((post, index) => (
-              <motion.div key={post.title} variants={variant} initial="initial" animate="animate" transition={{duration: 0.7, type: "spring"}} className={styles.blogPost}>
-                <div className={styles.blogImageContainer}>
-                <Image
-                  src={post.image}
-                  alt={post.alt}
-                  width={400}
-                  height={200}
-                  className={styles.blogImage}
-                />
-                </div>
-                <div className={styles.blogContent}>
-                  <span className={styles.blogDate}>{post.date}</span>
-                  <h3 className={styles.blogTitle}>{post.title}</h3>
-                  <p className={styles.blogExcerpt}>
-                    {post.excerpt}
-                  </p>
-                    <AnimatePresence>
-                      {expandedIndexes[index] && (
-                        <motion.p
-                          initial={{ opacity: 0, height: 0 }}
-                          animate={{ opacity: 1, height: "auto" }}
-                          exit={{ opacity: 0, height: 0 }}
-                          transition={{ duration: 0.5 }}
-                          className={styles.blogFullContent}
-                        >
-                          {post.content}
-                        </motion.p>
-                      )}
-                    </AnimatePresence>
-                  <button onClick={() => toggleExpand(index)} className={styles.blogButton}>{expandedIndexes[index] ? "Ver menos" : "Leer más"}</button>
-                </div>
-              </motion.div>
-            ))
-          }
-          <AnimatePresence>
-          {
-            mas && moreBlogPosts.map((post, index) => (
-              <motion.div key={post.title} variants={variant} initial="initial" animate="animate" transition={{duration: 0.7, type: "spring"}} exit={{opacity: 0}} className={styles.blogPost}>
-                <div className={styles.blogImageContainer}>
+          <div className={styles.blogContainer}>
+            {
+              blogPosts && blogPosts.map((post, index) => (
+                <motion.div key={post.title} variants={variant} initial="initial" animate="animate" transition={{duration: 0.7, type: "spring"}} className={styles.blogPost}>
+                  <div className={styles.blogImageContainer}>
                   <Image
                     src={post.image}
                     alt={post.alt}
@@ -90,37 +55,76 @@ export default function Blog() {
                     height={200}
                     className={styles.blogImage}
                   />
-                </div>
-                <div className={styles.blogContent}>
-                  <span className={styles.blogDate}>{post.date}</span>
-                  <h3 className={styles.blogTitle}>{post.title}</h3>
-                  <p className={styles.blogExcerpt}>
-                    {post.excerpt}
-                  </p>
-                    <AnimatePresence>
-                      {expandedIndexes[index] && (
-                        <motion.p
-                          initial={{ opacity: 0, height: 0 }}
-                          animate={{ opacity: 1, height: "auto" }}
-                          exit={{ opacity: 0, height: 0 }}
-                          transition={{ duration: 0.5 }}
-                          className={styles.blogFullContent}
-                        >
-                          {post.content}
-                        </motion.p>
-                      )}
-                    </AnimatePresence>
-                  <button onClick={() => toggleExpand(index)} className={styles.blogButton}>{expandedIndexes[index] ? "Ver menos" : "Leer más"}</button>
-                </div>
-              </motion.div>
-            ))
-          }
-          </AnimatePresence>
-        </div>
+                  </div>
+                  <div className={styles.blogContent}>
+                    <span className={styles.blogDate}>{post.date}</span>
+                    <h3 className={styles.blogTitle}>{post.title}</h3>
+                    <p className={styles.blogExcerpt}>
+                      {post.excerpt}
+                    </p>
+                      <AnimatePresence>
+                        {expandedIndexes[index] && (
+                          <motion.p
+                            initial={{ opacity: 0, height: 0 }}
+                            animate={{ opacity: 1, height: "auto" }}
+                            exit={{ opacity: 0, height: 0 }}
+                            transition={{ duration: 0.5 }}
+                            className={styles.blogFullContent}
+                          >
+                            {post.content}
+                          </motion.p>
+                        )}
+                      </AnimatePresence>
+                    <button onClick={() => toggleExpand(index)} className={styles.blogButton}>{expandedIndexes[index] ? "Ver menos" : "Leer más"}</button>
+                  </div>
+                </motion.div>
+              ))
+            }
+            <AnimatePresence>
+            {
+              mas && moreBlogPosts.map((post, index) => (
+                <motion.div key={post.title} variants={variant} initial="initial" animate="animate" transition={{duration: 0.7, type: "spring"}} exit={{opacity: 0}} className={styles.blogPost}>
+                  <div className={styles.blogImageContainer}>
+                    <Image
+                      src={post.image}
+                      alt={post.alt}
+                      width={400}
+                      height={200}
+                      className={styles.blogImage}
+                    />
+                  </div>
+                  <div className={styles.blogContent}>
+                    <span className={styles.blogDate}>{post.date}</span>
+                    <h3 className={styles.blogTitle}>{post.title}</h3>
+                    <p className={styles.blogExcerpt}>
+                      {post.excerpt}
+                    </p>
+                      <AnimatePresence>
+                        {expandedIndexes[index] && (
+                          <motion.p
+                            initial={{ opacity: 0, height: 0 }}
+                            animate={{ opacity: 1, height: "auto" }}
+                            exit={{ opacity: 0, height: 0 }}
+                            transition={{ duration: 0.5 }}
+                            className={styles.blogFullContent}
+                          >
+                            {post.content}
+                          </motion.p>
+                        )}
+                      </AnimatePresence>
+                    <button onClick={() => toggleExpand(index)} className={styles.blogButton}>{expandedIndexes[index] ? "Ver menos" : "Leer más"}</button>
+                  </div>
+                </motion.div>
+              ))
+            }
+            </AnimatePresence>
+          </div>
 
-        <div className={styles.blogMoreContainer}>
-          <button onClick={() => setMas(!mas)} className={styles.blogMoreButton}>{mas ? "Ver menos artículos" : "Ver más artículos"}</button>
-        </div>
-      </section>
+          <div className={styles.blogMoreContainer}>
+            <button onClick={() => setMas(!mas)} className={styles.blogMoreButton}>{mas ? "Ver menos artículos" : "Ver más artículos"}</button>
+          </div>
+        </section>
+        <Flotante />
+      </>
     )
 }

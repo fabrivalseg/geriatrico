@@ -137,6 +137,9 @@
 }
 
 .formButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: rgb(170, 187, 156);
   color: white;
   border: none;
@@ -204,4 +207,20 @@
   .serviceTitle {
     font-size: 1.2rem;
   }
+}
+
+.mapaContainer {
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.mapaContainer iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 200px;
+  border: none;
 }

@@ -1,126 +1,120 @@
-.footerContainer{
+.footerContainer {
     width: 100%;
-    height: 100%;
     background-color: rgb(63, 89, 77);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     color: white;
-    grid-area: "footer";
-    padding: 20px;
+    padding: 30px 20px;
+    gap: 30px;
 }
 
-.footer{
-    width: 90%;
+.footer {
+    width: 100%;
+    max-width: 1400px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
+    justify-items: center;
+    align-items: start;
+}
+
+.imagenContainerFooter {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    height: 100%;
-    animation: navbar 1s ease;
+    justify-content: center;
 }
 
-.imagenContainerFooter{
-    height: 70px;
+.imagenFooter {
+    height: 80px;
     width: auto;
 }
 
-.imagenFooter{
-    height: 100%;
-    width: 100%;
-}
-
-.linksFooterContainer, .contactoFooterContainer{
+.linksFooterContainer,
+.contactoFooterContainer {
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
     flex-direction: column;
-    height: 100%;
-    gap: 4px;
-    font-size: 1rem;
-    width: 16%;
+    gap: 10px;
+    width: 100%;
+    align-items: center;
+    text-align: center;
 }
 
-.contactoFooter, .linksFooter{
+.sectionTitle {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.linksFooter {
     color: white;
     text-decoration: none;
-    padding: 3px;
-    font-family: var(--font-montserrat);
-    text-align: start;
+    transition: all 0.3s ease;
+    font-size: 1rem;
     cursor: pointer;
 }
 
+.linksFooter:hover {
+    transform: scale(1.05);
+    text-decoration: underline;
+}
 
+.contactoFooter {
+    color: white;
+    margin: 0;
+    font-size: 0.95rem;
+}
 
-.redesContainer{
+.scrollContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.scrollTop {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
-    height: 100%;
-    width: 140px;
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 10px 25px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
 }
 
-.redesFooter{
-    width: 30%;
-    height: 70%;
-}
-
-.redesFooter:hover{
-    transform: scale(1.1);
+.scrollTop:hover {
+    background: white;
+    color: rgb(63, 89, 77);
+    transform: translateY(-3px);
 }
 
 
 @media screen and (max-width: 768px) {
-    .footerContainer{
-        padding: 20px;
+    .footer {
+        grid-template-columns: 1fr;
+        gap: 30px;
     }
 
-    .footer{
-        flex-direction: column;
-        height: auto;
-        gap: 10px;
+    .imagenFooter {
+        height: 60px;
     }
 
-    .imagenContainerFooter{
-        height: 100%;
-        width: 100%;
-        padding-bottom: 15px;
-        border-bottom: 1px solid rgb(86, 86, 86);
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    .sectionTitle {
+        margin-bottom: 12px;
     }
 
-    .imagenFooter{
-        width: 140px;
-        height: auto;
+    .linksFooter,
+    .contactoFooter {
+        font-size: 1.05rem;
     }
 
-    .linksFooterContainer, .contactoFooterContainer{
-        align-items: center;
-        width: 100%;
-        border-bottom: 1px solid rgb(86, 86, 86);
-        padding-bottom: 15px;
-    
+    .scrollTop {
+        padding: 8px 16px;
+        font-size: 0.9rem;
     }
-
-    .redesContainer{
-        width: 140px;
-        gap: 20px;
-    }
-
-    .contactoFooter{
-        max-width: 100%;
-    }
-
-    .spanInfo{
-        text-align: center;
-    }
-.contactoFooter{
-    text-align: center;
 }
-
-}
-
-
-

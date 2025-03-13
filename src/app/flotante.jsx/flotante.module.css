@@ -1,0 +1,102 @@
+
+.flotanteContainer {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+  }
+  
+
+  .flotanteBtn {
+    width: 65px;
+    height: 65px;
+    background-color: white;
+    border: 2px solid rgb(63, 89, 77);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+  }
+  
+  .flotanteBtn:hover {
+    background-color: rgb(63, 89, 77);
+  }
+  
+  .iconoPrincipal {
+    color: rgb(63, 89, 77);
+    font-size: 35px;
+    transition: color 0.3s ease;
+  }
+  
+  .flotanteBtn:hover .iconoPrincipal {
+    color: white;
+  }
+  
+
+  .iconosContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+ 
+  .iconoFlotante {
+    font-size: 45px;
+    color: white;
+  }
+  
+  .iconoLink {
+    background-color: rgb(63, 89, 77);
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .iconoLink:hover {
+    background-color: white;
+    border: 2px solid rgb(63, 89, 77);
+  }
+  
+  .iconoLink:hover .iconoFlotante {
+    color: rgb(63, 89, 77);
+  }
+  
+  /* Responsive */
+  @media screen and (max-width: 768px) {
+    .flotanteContainer {
+      bottom: 20px;
+      right: 20px;
+    }
+  
+    .flotanteBtn {
+      width: 55px;
+      height: 55px;
+    }
+  
+    .iconoPrincipal {
+      font-size: 28px;
+    }
+  
+    .iconoFlotante {
+      font-size: 38px;
+    }
+  
+    .iconoLink {
+      width: 50px;
+      height: 50px;
+    }
+  }
+  
