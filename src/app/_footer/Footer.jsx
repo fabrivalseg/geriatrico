@@ -60,8 +60,8 @@ export default function Footer() {
                     whileInView="whileInView"
                 >
                     <h4 className={style.sectionTitle}>Contacto</h4>
-                    <p className={style.contactoFooter}>Dirección: Sarmiento 1972</p>
-                    <p className={style.contactoFooter}>Teléfono: 3517169604</p>
+                    <p className={style.contactoFooter}>Dirección: Malvinas Argentinas 76, Rio Segundo</p>
+                    <p className={style.contactoFooter}>Teléfono: +54 9 351 6017836</p>
                     <p className={style.contactoFooter}>Email: <a href="mailto:calidiaresidenciasenior@gmail.com" className={style.linksFooter}>calidiaresidenciasenior@gmail.com</a></p>
                 </motion.address>
             </div>

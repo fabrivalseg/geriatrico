@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { motion, AnimatePresence, spring } from "framer-motion";
-import styles from "./joinTeamModal.module.css"; // Puedes crear este CSS o añadir al que ya tienes
+import styles from "./joinTeamModal.module.css";
 
 const JoinTeamModal = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,7 +34,7 @@ const JoinTeamModal = () => {
             >
               <h3>Formulario de Postulación</h3>
               <form
-                action="https://usebasin.com/f/tu-endpoint" // Reemplazar por tu URL de Basin
+                action="https://usebasin.com/f/tu-endpoint"
                 method="POST"
                 encType="multipart/form-data"
               >
