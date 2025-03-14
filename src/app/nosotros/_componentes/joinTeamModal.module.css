@@ -1,0 +1,173 @@
+.callToActionContainer {
+  text-align: center;
+  margin: 4rem 0;
+  padding: 0 1rem; 
+}
+
+
+.joinTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: rgb(63, 89, 77);
+  position: relative;
+}
+
+.joinTitle::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: rgb(63, 89, 77);
+}
+
+.joinText {
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+
+.joinButton {
+  padding: 0.8rem 2rem;
+  background-color: rgb(63, 89, 77);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.joinButton:hover {
+  background-color: rgb(53, 75, 65);
+}
+
+/* Modal Styles */
+.modalBackdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 1rem; /* padding para que el modal nunca toque los bordes */
+  box-sizing: border-box;
+}
+
+.modalContent {
+  background: rgb(251, 245, 232);
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 100%;
+  position: relative;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+}
+
+.modalContent h3 {
+  margin-bottom: 1rem;
+  color: rgb(63, 89, 77);
+  font-size: 1.5rem;
+}
+
+.modalContent .input,
+.modalContent .textarea {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: rgb(251, 245, 232);
+  box-sizing: border-box;
+}
+
+.textarea {
+  min-height: 150px;
+}
+
+.modalActions {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap; /* para que los botones bajen si no entran */
+}
+
+.submitButton,
+.cancelButton {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  flex: 1;
+  min-width: 120px; /* ancho mínimo para que no se achiquen demasiado */
+  box-sizing: border-box;
+}
+
+.submitButton {
+  background-color: rgb(63, 89, 77);
+  color: white;
+}
+
+.cancelButton {
+  background-color: #ccc;
+  color: black;
+}
+
+.submitButton:hover {
+  background-color: rgb(53, 75, 65);
+}
+
+.cancelButton:hover {
+  background-color: #aaa;
+}
+
+@media (max-width: 480px) {
+  .joinTitle {
+    font-size: 1.5rem;
+  }
+
+  .modalContent {
+    padding: 1.5rem;
+  }
+
+  .modalContent h3 {
+    font-size: 1.3rem;
+  }
+
+  .modalActions {
+    flex-direction: column; 
+    gap: 0.8rem;
+  }
+
+  .submitButton,
+  .cancelButton {
+    width: 100%; 
+  }
+}
+
+
+@media (max-width: 768px) {
+  .joinTitle {
+    font-size: 1.8rem;
+  }
+
+  .modalContent {
+    padding: 1.8rem;
+  }
+}
+
+
+@media (min-width: 1024px) {
+  .modalContent {
+    max-width: 600px;
+  }
+}
