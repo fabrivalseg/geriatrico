@@ -136,7 +136,7 @@ const Nosotros = () => {
                 <strong>Mirada Humana: </strong> tratamos a cada persona como alguien único, con una historia que merece ser valorada.
               </p>
               <p className={styles.valueDescription}>
-                <strong>Confianza: </strong>construimos vínculos genuinos con cada familia y residente, desde la transparencia y el compromiso.
+                <strong>Confianza:</strong> construimos vínculos genuinos con cada familia y residente, desde la transparencia y el compromiso.
               </p>
             </motion.div>
           </div>

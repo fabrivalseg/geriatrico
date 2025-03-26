@@ -152,11 +152,11 @@
     }
   
     .heroDescription {
-      font-size: 0.95rem;
+      font-size: 1.05rem;
     }
   
     .heroButton {
-      font-size: 1rem;
+      font-size: 1.1rem;
       padding: 0.6rem 1.5rem;
       border-radius: 25px;
     }
@@ -168,11 +168,11 @@
     }
   
     .heroDescription {
-      font-size: 0.9rem;
+      font-size: 1.05rem;
     }
   
     .heroButton {
-      font-size: 0.9rem;
+      font-size: 1.1rem;
       padding: 0.5rem 1.2rem;
       border-radius: 20px;
     }

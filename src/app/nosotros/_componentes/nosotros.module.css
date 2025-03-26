@@ -82,7 +82,7 @@
   font-size: 1rem;
   line-height: 1.6;
   color: #555;
-  text-align: justify;
+  text-align: start;
 }
 
 .teamTitle {
@@ -282,7 +282,7 @@
   font-size: 1rem;
   line-height: 1.6;
   color: #555;
-  text-align: justify;
+  text-align: start;
   max-width: 900px;
   margin: 0 auto;
   letter-spacing: 1px;
