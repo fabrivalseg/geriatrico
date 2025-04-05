@@ -60,7 +60,7 @@ export default function Servicios() {
             </motion.div>
 
             <motion.div variants={variant} initial="initial" whileInView="animate" transition={{duration: 0.7, delay: 0.8}}  className={styles.serviceItem}>
-              <h3 className={styles.serviceTitle}>Actividades recreativas</h3>
+              <h3 className={styles.serviceTitle}>Actividades recreativas y laborterapia</h3>
               <p className={styles.serviceDescription}>
                 Programa variado de actividades sociales, culturales y recreativas para fomentar la interacción social y
                 el bienestar emocional.

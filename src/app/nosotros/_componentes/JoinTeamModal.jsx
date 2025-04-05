@@ -34,14 +34,14 @@ const JoinTeamModal = () => {
             >
               <h3>Formulario de Postulación</h3>
               <form
-                action="https://usebasin.com/f/tu-endpoint"
+                action="https://usebasin.com/f/c66f3e79cb3c"
                 method="POST"
                 encType="multipart/form-data"
               >
                 <input className={styles.input} type="text" name="name" placeholder="Nombre completo" required />
                 <input className={styles.input} type="email" name="email" placeholder="Correo electrónico" required />
                 <textarea className={styles.textarea} name="message" placeholder="Cuéntanos por qué quieres sumarte" required />
-                <input className={styles.input} type="file" name="cv" accept=".pdf,.doc,.docx" required />
+                <input className={styles.input} type="file" name="cv" accept=".pdf,.doc,.docx" />
 
                 <div className={styles.modalActions}>
                   <button type="submit" className={styles.submitButton}>Enviar</button>

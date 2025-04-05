@@ -17,7 +17,7 @@ export const metadata = {
     siteName: "Residencia Geriátrica",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/logo/calidia_name_blanco.jpg",
         width: 1200,
         height: 630,
         alt: "Residencia Geriátrica",
@@ -25,13 +25,6 @@ export const metadata = {
     ],
     locale: "es_ES",
     type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Residencia Geriátrica | Cuidado y atención para adultos mayores",
-    description:
-      "Ofrecemos servicios de cuidado integral para adultos mayores en un ambiente acogedor y seguro. Atención médica 24/7, actividades recreativas y más.",
-    images: ["/twitter-image.jpg"],
   },
   robots: {
     index: true,
