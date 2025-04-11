@@ -4,23 +4,23 @@ import Header from "./_header/Header";
 import Footer from "./_footer/Footer";
 
 export const metadata = {
-  title: "Residencia Geriátrica | Cuidado y atención para adultos mayores | Geriatrico en Rio Segundo, Cordoba, Argentina",
+  title: "Residencia Senior | Cuidado y atención para adultos mayores | Geriatrico en Rio Segundo, Cordoba, Argentina",
   description:
     "Ofrecemos servicios de cuidado integral para adultos mayores en un ambiente acogedor y seguro. Atención médica 24/7, actividades recreativas y más.",
   keywords:
-    "residencia geriátrica, cuidado de adultos mayores, hogar de ancianos, atención médica para mayores, residencia tercera edad, Residencia, Geriátrica, Cuidado, Atención, Adultos, Mayores, Geriátrico, Cordoba, Rio Segundo, Argentina",
+    "residencia Senior, cuidado de adultos mayores, hogar de ancianos, atención médica para mayores, residencia tercera edad, Residencia, Geriátrica, Cuidado, Atención, Adultos, Mayores, Geriátrico, Cordoba, Rio Segundo, Argentina",
   openGraph: {
-    title: "Residencia Geriátrica | Cuidado y atención para adultos mayores",
+    title: "Residencia Senior | Cuidado y atención para adultos mayores",
     description:
       "Ofrecemos servicios de cuidado integral para adultos mayores en un ambiente acogedor y seguro. Atención médica 24/7, actividades recreativas y más.",
-    url: "https://www.residenciageriatrica.com",
-    siteName: "Residencia Geriátrica",
+    url: "https://www.calidia.com.ar",
+    siteName: "Calidia Residencia senior",
     images: [
       {
         url: "/logo/calidia_name_blanco.jpg",
         width: 1200,
         height: 630,
-        alt: "Residencia Geriátrica",
+        alt: "Calidia Residencia senior",
       },
     ],
     locale: "es_ES",
@@ -38,7 +38,7 @@ export const metadata = {
     },
   },
   alternates: {
-    canonical: "https://www.residenciageriatrica.com",
+    canonical: "https://www.calidia.com.ar",
   },
 };
 
