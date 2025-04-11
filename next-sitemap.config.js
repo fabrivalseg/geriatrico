@@ -1,5 +1,5 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-    siteUrl: 'http://localhost:3000', 
+    siteUrl: 'https://calidia.com.ar/', 
     generateRobotsTxt: true,
   };
