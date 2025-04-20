@@ -36,10 +36,10 @@ export default function Formulario() {
     e.preventDefault();
 
     const { nombre, email, telefono, asunto, mensaje } = formData;
-    const phoneNumber = "5493517169604";
+    const phoneNumber = "5493516017836";
     const message = `📩 Nuevo mensaje de contacto:\n\n👤 Nombre: ${nombre}\n📧 Email: ${email}\n📞 Teléfono: ${telefono}\n📝 Asunto: ${asunto}\n💬 Mensaje: ${mensaje}`;
 
-    // Detectar si el usuario está en un móvil o en PC
+
     const isMobile = /iPhone|Android/i.test(navigator.userAgent);
     const url = isMobile
       ? `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`

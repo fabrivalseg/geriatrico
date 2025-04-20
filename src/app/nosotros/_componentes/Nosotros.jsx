@@ -48,10 +48,8 @@ const variant2 = {
 };
 
 
-const equipo = [{memberName: "Dr. Martínez", memberRole: "Director Médico", memberPhoto: "/imagenes/nosotros/equipo/shutterstock_2401258387.webp?height=150&width=150"},
-{memberName: "Lic. Rodríguez", memberRole: "Enfermera Jefe", memberPhoto: "/imagenes/nosotros/equipo/shutterstock_2401258387.webp?height=150&width=150"},
-{memberName: "Lic. Rodríguez", memberRole: "Enfermera Jefe", memberPhoto: "/imagenes/nosotros/equipo/shutterstock_2401258387.webp?height=150&width=150"},
-{memberName: "Lic. Rodríguez", memberRole: "Enfermera Jefe", memberPhoto: "/imagenes/nosotros/equipo/shutterstock_2401258387.webp?height=150&width=150"},
+const equipo = [{memberName: "Dr. Mariano Montiel Bertone", memberRole: ["Especialista en Medicina Interna", "Especialista en Reumatología"], memberPhoto: "/imagenes/nosotros/equipo/Mariano_Montiel_Bertone.jpg?height=150&width=150"},
+{memberName: "Dra. Ana Paula Giotto", memberRole: ["Especialista en Medicina Interna", "Especialista en Nefrología"], memberPhoto: "/imagenes/nosotros/equipo/Ana_Paula_Giotto.jpg?height=150&width=150"},
 ]
 
 const Nosotros = () => {
@@ -156,7 +154,11 @@ const Nosotros = () => {
                     />
                   </div>
                   <h4 className={styles.teamMemberName}>{member.memberName}</h4>
-                  <p className={styles.teamMemberRole}>{member.memberRole}</p>
+                  {
+                    member.memberRole.map((rol) => {
+                      return <p className={styles.teamMemberRole}>{rol}</p>
+                    })
+                  }
                 </motion.div>
               )
             })}
