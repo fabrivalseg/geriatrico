@@ -1,157 +1,311 @@
 .sectionTitle {
-    font-size: 2.5rem;
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 2rem;
-    color: rgb(63, 89, 77);
-    position: relative;
-  }
-  
-  .sectionTitle::after {
-    content: "";
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 3px;
-    background-color: rgb(63, 89, 77);
-  }
-  
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: rgb(63, 89, 77);
+  position: relative;
+}
+
+.sectionTitle::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: rgb(63, 89, 77);
+}
+
 .blogSection {
-    padding: 5rem 1rem;
-    overflow-x: hidden;
-  }
-  
-  .blogDescription {
-    max-width: 800px;
-    margin: 0 auto 3rem auto;
-    text-align: center;
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #555;
-  }
-  
+  padding: 5rem 1rem;
+  overflow-x: hidden;
+}
+
+.blogDescription {
+  max-width: 800px;
+  margin: 0 auto 3rem auto;
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.blogContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto 2rem auto;
+  justify-items: center;
+}
+
+@media (min-width: 768px) {
   .blogContainer {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto 2rem auto;
+    grid-template-columns: repeat(2, 1fr);
   }
-  
-  @media (min-width: 768px) {
-    .blogContainer {
-      grid-template-columns: repeat(2, 1fr);
-    }
+}
+
+.blogPost {
+  background-color: rgb(251, 245, 232);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: 100%;
+}
+
+.blogPost:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Cambiar la altura del contenedor de imágenes en las tarjetas */
+.blogImageContainer {
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+  position: relative;
+}
+
+.blogImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.blogPost:hover .blogImage {
+  transform: scale(1.1);
+}
+
+.blogContent {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.blogDate {
+  font-size: 0.9rem;
+  color: rgb(155, 175, 140);
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.blogTitle {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.blogExcerpt {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.blogButton {
+  align-self: flex-start;
+  background-color: transparent;
+  color: rgb(122, 146, 102);
+  border: none;
+  padding: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.blogButton::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: rgb(122, 146, 102);
+  transition: width 0.3s ease;
+}
+
+.blogButton:hover {
+  color: rgb(164, 184, 148);
+}
+
+.blogButton:hover::after {
+  width: 100%;
+}
+
+/* Modal Overlay */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+  backdrop-filter: blur(3px);
+}
+
+/* Modal Content */
+.modalContent {
+  background-color: rgb(251, 245, 232);
+  border-radius: 10px;
+  max-width: 800px;
+  width: 100%;
+  position: relative;
+  overflow-y: auto;
+  max-height: 90vh;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Ajustar también la altura del contenedor de imágenes en el modal */
+.modalImageContainer {
+  width: 100%;
+  height: 250px; /* Reducido de 300px a 250px */
+  overflow: hidden;
+  position: relative;
+}
+
+.modalImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Modal Content Text */
+.modalContentText {
+  padding: 2rem;
+}
+
+/* Modal Title */
+.modalTitle {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: rgb(63, 89, 77);
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+  line-height: 1.3;
+}
+
+/* Close Button */
+.modalClose {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgb(63, 89, 77);
+  color: white;
+  border: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+}
+
+.modalClose:hover {
+  background: rgb(83, 109, 97);
+  transform: scale(1.1);
+}
+
+/* Full Content */
+.blogFullContent {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #444;
+}
+
+.blogFullContent h3 {
+  font-size: 1.5rem;
+  color: rgb(63, 89, 77);
+  margin: 1.5rem 0 1rem;
+  font-weight: 600;
+}
+
+.blogFullContent h3:first-child {
+  margin-top: 0;
+}
+
+.blogFullContent p {
+  margin-bottom: 1rem;
+}
+
+.blogFullContent strong {
+  color: rgb(63, 89, 77);
+  font-weight: 600;
+}
+
+.blogFullContent ul {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+.blogFullContent li {
+  margin-bottom: 0.5rem;
+  position: relative;
+  padding-left: 0.5rem;
+}
+
+.blogFullContent li::before {
+  content: "•";
+  color: rgb(122, 146, 102);
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.blogFullContent em {
+  font-style: italic;
+  color: #555;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .modalContent {
+    width: 95%;
   }
-  
-  @media (min-width: 992px) {
-    .blogContainer {
-      grid-template-columns: repeat(3, 1fr);
-    }
+
+  .modalTitle {
+    font-size: 1.5rem;
   }
-  
-  .blogPost {
-    background-color: rgb(251, 245, 232);
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .blogPost:hover {
-    transform: translateY(-10px);
-  }
-  
-  .blogImageContainer {
-    width: 100%;
+
+  .modalImageContainer {
     height: 200px;
-    overflow: hidden;
   }
-  
-  .blogImage {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-  }
-  
-  .blogPost:hover .blogImage {
-    transform: scale(1.1);
-  }
-  
-  .blogContent {
+
+  .modalContentText {
     padding: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
   }
-  
-  .blogDate {
-    font-size: 0.9rem;
-    color: rgb(155, 175, 140);
-    margin-bottom: 0.5rem;
-    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+
+  .blogImageContainer {
+    height: 250px;
   }
-  
-  .blogTitle {
-    font-size: 1.4rem;
-    font-weight: 600;
-    color: #2c3e50;
-    margin-bottom: 1rem;
-    line-height: 1.4;
+  .blogPost {
+    width: 90%;
   }
-  
-  .blogExcerpt {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #555;
-    margin-bottom: 1.5rem;
-    flex-grow: 1;
-  }
-  
-  .blogButton {
-    align-self: flex-start;
-    background-color: transparent;
-    color: rgb(122, 146, 102);
-    border: none;
-    padding: 0;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: color 0.3s ease;
-    display: flex;
-    align-items: center;
-  }
-  
-  .blogButton:hover {
-    color: rgb(164, 184, 148);
-    text-decoration: underline;
-  }
-  
-  .blogMoreContainer {
-    display: flex;
-    justify-content: center;
-    margin-top: 2rem;
-  }
-  
-  .blogMoreButton {
-    background-color: rgb(134, 158, 114);
-    color: white;
-    border: none;
-    padding: 0.8rem 2rem;
-    font-size: 1rem;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .blogMoreButton:hover {
-    background-color: rgb(118, 139, 101);
-    transform: translateY(-3px);
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
-  }
+}
