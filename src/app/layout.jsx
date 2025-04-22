@@ -49,6 +49,7 @@ export default function RootLayout({ children }) {
         <link rel="icon" type="image/x-icon" href="./imagenes/logo/favicon.ico" />
       </head>
       <body>
+        <img src="https://tracker.metricool.com/c3po.jpg?hash=1d898470c208bacbcaf6a37503e240ea"/>
         <Header /> 
         <main>
           {children}

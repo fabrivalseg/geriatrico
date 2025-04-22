@@ -31,7 +31,7 @@ export default function Flotante() {
                         transition={{ duration: 0.3 }}
                     >
                         <motion.a
-                            href="https://wa.me/3517169604"
+                            href="https://wa.me/3516017836"
                             target="_blank"
                             rel="noopener noreferrer"
                             className={styles.iconoLink}
@@ -41,7 +41,7 @@ export default function Flotante() {
                             <FaWhatsapp className={styles.iconoFlotante} />
                         </motion.a>
                         <motion.a
-                            href="https://wa.me/3517169604"
+                            href="https://www.facebook.com/profile.php?id=61574210142402"
                             target="_blank"
                             rel="noopener noreferrer"
                             className={styles.iconoLink}
@@ -52,7 +52,7 @@ export default function Flotante() {
                         </motion.a>
 
                         <motion.a
-                            href="https://instagram.com"
+                            href="https://www.instagram.com/somoscalidia/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className={styles.iconoLink}

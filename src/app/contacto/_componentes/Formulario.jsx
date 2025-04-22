@@ -115,7 +115,7 @@ export default function Formulario() {
             className={styles.contactInfoItem}
           >
             <h3 className={styles.contactInfoTitle}>Email</h3>
-            <p className={styles.contactInfoText}>info@residenciageriatrica.com</p>
+            <p className={styles.contactInfoText}>calidiaresidenciasenior@gmail.com</p>
           </motion.div>
 
           <motion.div
@@ -126,7 +126,7 @@ export default function Formulario() {
             className={styles.contactInfoItem}
           >
             <h3 className={styles.contactInfoTitle}>Horario de visitas</h3>
-            <p className={styles.contactInfoText}>Lunes a Domingo: 10:00 - 18:00</p>
+            <p className={styles.contactInfoText}>Proximamente...</p>
           </motion.div>
         </div>
 

@@ -41,8 +41,11 @@ const JoinTeamModal = () => {
                 <input className={styles.input} type="text" name="name" placeholder="Nombre completo" required />
                 <input className={styles.input} type="email" name="email" placeholder="Correo electrónico" required />
                 <textarea className={styles.textarea} name="message" placeholder="Cuéntanos por qué quieres sumarte" required />
-                <input className={styles.input} type="file" name="cv" accept=".pdf,.doc,.docx" />
-
+                <input className={styles.input} type="text" name="telefono" placeholder="Teléfono" required />
+                <label className={styles.fileLabel}>
+                  Adjunta tu CV (opcional):
+                  <input className={styles.input} type="file" name="cv" accept=".pdf,.doc,.docx" />
+                </label>
                 <div className={styles.modalActions}>
                   <button type="submit" className={styles.submitButton}>Enviar</button>
                   <button type="button" className={styles.cancelButton} onClick={() => setIsOpen(false)}>Cancelar</button>
