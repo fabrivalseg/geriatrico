@@ -17,7 +17,7 @@ const blogPosts = [
   {
     image: "/imagenes/blog/como_elegir.jpeg?height=200&width=400",
     alt: "Cómo elegir la mejor residencia",
-    date: "15 de Junio, 2023",
+    date: "24 de Abril, 2025",
     title: "Cómo elegir la mejor residencia para un ser querido",
     excerpt: "Elegir una residencia senior no es solo una elección logística, es un acto de amor, cuidado y responsabilidad...",
     content: `
@@ -48,7 +48,7 @@ const blogPosts = [
   {
     image: "/imagenes/blog/laborterapia.jpeg?height=200&width=400",
     alt: "Laborterapia y manualidades",
-    date: "20 de Julio, 2023",
+    date: "24 de Abril, 2025",
     title: "Laborterapia: el arte de sanar haciendo",
     excerpt: "La laborterapia es una forma de terapia ocupacional que utiliza actividades manuales y creativas como herramienta de bienestar...",
     content: `
