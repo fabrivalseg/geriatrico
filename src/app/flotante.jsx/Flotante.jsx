@@ -31,7 +31,7 @@ export default function Flotante() {
                         transition={{ duration: 0.3 }}
                     >
                         <motion.a
-                            href="https://wa.me/3516017836"
+                            href="https://wa.me/3518198716"
                             target="_blank"
                             rel="noopener noreferrer"
                             className={styles.iconoLink}

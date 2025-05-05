@@ -36,7 +36,7 @@ export default function Formulario() {
     e.preventDefault();
 
     const { nombre, email, telefono, asunto, mensaje } = formData;
-    const phoneNumber = "5493516017836";
+    const phoneNumber = "5493518198716";
     const message = `📩 Nuevo mensaje de contacto:\n\n👤 Nombre: ${nombre}\n📧 Email: ${email}\n📞 Teléfono: ${telefono}\n📝 Asunto: ${asunto}\n💬 Mensaje: ${mensaje}`;
 
 
@@ -104,7 +104,7 @@ export default function Formulario() {
             className={styles.contactInfoItem}
           >
             <h3 className={styles.contactInfoTitle}>Teléfono</h3>
-            <p className={styles.contactInfoText}>+54 9 351 601-7836</p>
+            <p className={styles.contactInfoText}>+54 9 351 819-8716</p>
           </motion.div>
 
           <motion.div
