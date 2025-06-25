@@ -93,6 +93,51 @@ const blogPosts = [
       <p>Desde una pequeña manualidad hasta un proyecto colectivo, todo lo que se crea en Calidia tiene valor. Porque lo importante no es el resultado, sino el proceso, la emoción compartida, la historia que se sigue escribiendo.</p>
     `,
   },
+  {
+  "image": "/imagenes/blog/brecha_digital.jpeg?height=200&width=400",
+  "alt": "La brecha digital en personas mayores",
+  "date": "24 de Junio, 2025",
+  "title": "La brecha digital en personas mayores",
+  "excerpt": "Muchas personas mayores aún encuentran barreras que les impiden integrarse plenamente al mundo digital. Pero existen estrategias sencillas para reducir esa brecha...",
+  "content": `
+    <h3>Herramientas prácticas y acompañamiento para una inclusión digital real</h3>
+
+    <p>En los últimos años, el uso de la tecnología se volvió casi indispensable para realizar trámites, comunicarse con la familia o incluso acceder a servicios de salud. Sin embargo, muchas personas mayores aún encuentran barreras que les impiden integrarse plenamente a este mundo digital, generando una brecha que puede agravar su aislamiento o dependencia.</p>
+
+    <p>Según datos de la Organización Mundial de la Salud, solo el 35% de los adultos mayores de 65 años acceden a Internet de forma frecuente. Esta desconexión no solo limita el acceso a información y recursos, sino también la posibilidad de mantener vínculos sociales activos, algo fundamental para el bienestar emocional.</p>
+
+    <p>La buena noticia es que existen estrategias muy sencillas para reducir esta brecha. Por ejemplo, enseñar el uso de aplicaciones como WhatsApp o videollamadas a través de talleres prácticos o instancias de aprendizaje personalizadas. Muchas veces, con una sola explicación clara y paciente, una persona mayor logra incorporar herramientas que luego utiliza todos los días.</p>
+
+    <p>Otra opción efectiva es promover el apoyo intergeneracional. Nietos, vecinos o voluntarios jóvenes pueden convertirse en verdaderos aliados, guiando paso a paso a las personas mayores en el uso de celulares, tablets o cajeros automáticos. Además, entregar manuales impresos con instrucciones simples y letra grande puede facilitar mucho el aprendizaje.</p>
+
+    <p>Desde instituciones como Calidia, también es posible acompañar este proceso, brindando espacios de aprendizaje y acompañamiento tecnológico, adaptados a las capacidades e intereses de cada persona.</p>
+
+    <p>Reducir la brecha digital no es solo una cuestión técnica: es una forma de inclusión y cuidado.</p>
+  `
+},
+  {
+    "image": "/imagenes/blog/prevenir_caidas.jpeg?height=200&width=400",
+    "alt": "Ejercicios simples para fortalecer huesos y prevenir caídas",
+    "date": "24 de Junio, 2025, 2025",
+    "title": "Ejercicios simples para fortalecer huesos y prevenir caídas",
+    "excerpt": "A medida que envejecemos, es natural que los huesos se vuelvan más frágiles. Pero con ejercicios simples y constantes, es posible fortalecer el cuerpo y prevenir caídas...",
+    "content": `
+      <h3>Rutinas fáciles para mantener la movilidad, la fuerza y la independencia en adultos mayores.</h3>
+
+      <p>A medida que envejecemos, es natural que los huesos se vuelvan más frágiles y los reflejos se tornen más lentos. Esta combinación puede aumentar el riesgo de caídas, una de las principales causas de lesiones en personas mayores. Sin embargo, existen ejercicios simples que, realizados con regularidad, ayudan a fortalecer los músculos, mejorar el equilibrio y proteger la salud ósea.</p>
+
+      <p>Uno de los ejercicios más recomendados es la sentadilla con apoyo. Solo se necesita una silla firme: de pie frente a ella, se bajan lentamente las caderas como si uno fuera a sentarse, sin llegar a hacerlo, y luego se vuelve a subir. Realizar 10 repeticiones al día ayuda a fortalecer muslos y glúteos, fundamentales para la estabilidad.</p>
+
+      <p>Otro ejercicio útil es la elevación de talones. Parado y con las manos apoyadas en el respaldo de una silla, se suben los talones lentamente hasta quedar en puntas de pie, y luego se bajan. Este movimiento trabaja los músculos de las pantorrillas y contribuye al equilibrio.</p>
+
+      <p>Por último, la marcha en el lugar con levantamiento de rodillas permite activar piernas y abdomen, además de mejorar la coordinación. Solo se necesita un espacio libre de obstáculos, un calzado cómodo y comenzar despacio, levantando una rodilla a la vez.</p>
+
+      <p>La clave está en la constancia. Estos ejercicios pueden realizarse en casa o en una institución como Calidia, bajo supervisión o con apoyo si fuera necesario. Lo importante es adaptar cada movimiento al ritmo y capacidad de cada persona, y siempre priorizar la seguridad.</p>
+
+      <p>Cuidar los huesos es también cuidar la autonomía. Y moverse, aunque sea un poco cada día, es una excelente manera de sumar salud y bienestar a cualquier edad.</p>
+    `
+  }
+
 ]
 
 export default function Blog() {
